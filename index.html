@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hediye Sihirbazı - V11 (Mega Depo)</title>
+    <title>Hediye Sihirbazı - V12 (Kazanç Modu)</title>
+    
+    <!-- FAVICON -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
     
-    <!-- ANALYTICS & SEO -->
-  <meta name="google-site-verification" content="VA-b6DqYe4FBAO4KNEBm1Cs86UbsrZzxllUIapHbRe0" />
+    <!-- GOOGLE SEARCH CONSOLE DOĞRULAMA -->
+    <meta name="google-site-verification" content="VA-b6DqYe4FBAO4KNEBm1Cs86UbsrZzxllUIapHbRe0" />
+
+    <!-- GOOGLE ADSENSE (REKLAM KODUN) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8335171074656428"
+     crossorigin="anonymous"></script>
+    
+    <!-- ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRGS25EF34"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -95,7 +103,7 @@
 
         <div class="loading" id="loadingIcon">
             <div class="spinner"></div>
-            <p style="font-size:14px; color:#888; margin-top:15px; font-weight:500;">Binlerce ürün taranıyor...</p>
+            <p style="font-size:14px; color:#888; margin-top:15px; font-weight:500;">Ürünler listeleniyor...</p>
         </div>
 
         <div id="results-area">
@@ -108,7 +116,6 @@
     </div>
 
     <script>
-        // --- V11.0 MEGA DATABASE ---
         const hediyeHavuzu = {
             "sevgili_kadin": {
                 "teknoloji": {
@@ -285,7 +292,6 @@
                     tumHavuz = [{t:"Hediye Kartı",d:"Garanti seçim.",i:"fa-ticket",l:"hediye+kartı"}];
                 }
 
-                // ARTIK 10 TANE GÖSTERİYOR
                 const gosterilecekler = shuffleArray(tumHavuz).slice(0, 10);
 
                 gosterilecekler.forEach(urun => {
