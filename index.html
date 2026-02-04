@@ -39,10 +39,6 @@
         .search-btn { width: 100%; padding: 20px; background: linear-gradient(135deg, #ff6000 0%, #ff4500 100%); color: white; border: none; border-radius: 16px; font-size: 18px; font-weight: 800; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 96, 0, 0.2); margin-top: 10px; display: flex; justify-content: center; align-items: center; gap: 10px; }
         .search-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(255, 96, 0, 0.3); }
         
-        /* Yatırım Linki Tasarımı */
-        .nav-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 25px; color: #64748b; text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.2s; padding: 10px 20px; border-radius: 50px; background: #f1f5f9; }
-        .nav-btn:hover { color: #ff6000; background: #fff0e6; }
-
         #results-area { display: none; margin-top: 40px; border-top: 2px dashed #f1f5f9; padding-top: 30px; }
         .product-card { background: #fff; border: 1px solid #f1f5f9; border-radius: 16px; padding: 18px; margin-bottom: 12px; text-align: left; display: flex; align-items: center; gap: 15px; transition: 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.01); }
         .product-card:hover { border-color: #ff6000; transform: translateX(5px); box-shadow: 0 10px 20px rgba(255, 96, 0, 0.08); }
@@ -104,11 +100,6 @@
         <button class="search-btn" onclick="hediyeBul()">
             HEDİYEYİ BUL <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
-        
-        <!-- YATIRIM SİTESİNE GİDEN LİNK (Adresini doğruladığın link) -->
-        <a href="https://xenoncountry.github.io/gecmisyatirim/" class="nav-btn" target="_blank">
-            <i class="fa-solid fa-chart-line"></i> Yatırım Sihirbazı'na Git
-        </a>
 
         <div class="loading" id="loadingIcon">
             <div class="spinner"></div>
@@ -195,9 +186,7 @@
                     "premium": [ {t:"Bakım Seti",d:"Full.",i:"fa-box",l:"erkek+lüks+bakım+seti"}, {t:"Braun Series 9",d:"Tıraş.",i:"fa-cut",l:"braun+series+9"} ]
                 },
                 "hobi": { "dusuk":[{t:"Puzzle",d:"Araba.",i:"fa-car",l:"araba+puzzle"}, {t:"Maket",d:"Uçak.",i:"fa-plane",l:"maket+uçak"}, {t:"Kupa",d:"Gamer.",i:"fa-gamepad",l:"gamer+kupa"}], "orta":[{t:"Dart",d:"Set.",i:"fa-bullseye",l:"dart+seti"}, {t:"Poker Seti",d:"Çantalı.",i:"fa-diamond",l:"poker+seti"}, {t:"Lego",d:"Speed.",i:"fa-car",l:"lego+speed"}], "yuksek":[{t:"Lego",d:"Technic.",i:"fa-car",l:"lego+technic"}, {t:"Direksiyon",d:"PC.",i:"fa-gamepad",l:"direksiyon+seti"}], "premium":[{t:"Xbox",d:"Konsol.",i:"fa-gamepad",l:"xbox"}, {t:"Drone",d:"DJI.",i:"fa-plane",l:"dji+drone"}] },
-                "moda": { "dusuk":[{t:"Bileklik",d:"Deri.",i:"fa-link",l:"erkek+bileklik"}, {t:"Bere",d:"Siyah.",i:"fa-hat-cowboy",l:"erkek+bere"}], "orta":[{t:"Kazak",d:"Triko.",i:"fa-shirt",l:"erkek+kazak"}, {t:"Sweatshirt",d:"Kapüşonlu.",i:"fa-shirt",l:"erkek+hoodie"}], "yuksek":[{t:"Ayakkabı",d:"Sneaker.",i:"fa-shoe-prints",l:"erkek+sneaker"}, {t:"Mont",d:"Deri.",i:"fa-user-tie",l:"erkek+deri+mont"}], "premium":[{t:"Ceket",d:"Deri.",i:"fa-user-tie",l:"erkek+deri+ceket"}, {t:"Saat",d:"Otomatik.",i:"fa-clock",l:"seiko+saat"}] },
-                "ev": { "dusuk":[{t:"Masa Saati",d:"Dijital.",i:"fa-clock",l:"dijital+masa+saati"}, {t:"Poster",d:"Film.",i:"fa-film",l:"film+posteri"}], "orta":[{t:"Lamba",d:"Masa.",i:"fa-lightbulb",l:"masa+lambası"}, {t:"Bar Seti",d:"Ev.",i:"fa-martini-glass",l:"ev+bar+seti"}], "yuksek":[{t:"Koltuk",d:"Oyuncu.",i:"fa-chair",l:"oyuncu+koltuğu"}, {t:"Ses Sistemi",d:"5+1.",i:"fa-music",l:"ses+sistemi"}], "premium":[{t:"TV",d:"Dev Ekran.",i:"fa-tv",l:"smart+tv"}, {t:"Kahve Mak.",d:"Tam otomatik.",i:"fa-mug-hot",l:"philips+kahve+makinesi"}] },
-                "bitki": { "dusuk":[{t:"Kaktüs",d:"Dayanıklı.",i:"fa-bullseye",l:"kaktüs"}], "orta":[{t:"Limon",d:"Ağaç.",i:"fa-lemon",l:"saksıda+limon"}, {t:"Bonsai",d:"Ağaç.",i:"fa-tree",l:"bonsai+ağacı"}], "yuksek":[{t:"Bahçe Seti",d:"Alet.",i:"fa-trowel",l:"bahçe+alet+seti"}], "premium":[{t:"Peyzaj",d:"Tasarım.",i:"fa-tree",l:"bahçe+dekorasyon"}] }
+                "moda": { "dusuk":[{t:"Şapka",d:"Kasket.",i:"fa-hat-cowboy",l:"kasket"}, {t:"Kemer",d:"Deri.",i:"fa-minus",l:"erkek+kemer"}], "orta":[{t:"Yelek",d:"Şişme.",i:"fa-vest",l:"erkek+yelek"}, {t:"Gömlek",d:"Kareli.",i:"fa-shirt",l:"erkek+kareli+gömlek"}], "yuksek":[{t:"Kaban",d:"Kaşe.",i:"fa-user-tie",l:"erkek+kaban"}, {t:"Ayakkabı",d:"Kundura.",i:"fa-shoe-prints",l:"erkek+kundura"}], "premium":[{t:"Saat",d:"İsviçre.",i:"fa-clock",l:"isviçre+saat"}] }
             },
 
             "anne": {
