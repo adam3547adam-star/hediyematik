@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!-- Google tag (gtag.js) - Xenon Country Ana Takip Kodu -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ED1JY3KB1C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ED1JY3KB1C');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatırım Sihirbazı | Xenon Country</title>
+    <meta name="description" content="Geçmişte dolar, altın veya bitcoin alsaydınız ne kadar paranız olurdu? Hesaplayın ve üzülün.">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root { --primary: #10b981; --secondary: #059669; --bg: #f8fafc; --text: #0f172a; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 20px; min-height: 100vh; display: flex; justify-content: center; }
+        
+        .container { background: white; width: 100%; max-width: 700px; border-radius: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.08); overflow: hidden; margin-top: 20px; border: 1px solid #f1f5f9; position: relative; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); padding: 50px 30px; text-align: center; color: white; position: relative; }
+        .header h1 { margin: 0; font-size: 36px; font-weight: 800; letter-spacing: -1.5px; }
+        .header p { margin: 12px 0 0; opacity: 0.95; font-size: 17px; font-weight: 500; }
+        
+        /* Ana Siteye Dönüş Linki - DÜZELTİLDİ */
+        .nav-link { position: absolute; top: 20px; left: 20px; color: white; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 50px; transition: 0.2s; backdrop-filter: blur(5px); }
+        .nav-link:hover { background: rgba(255,255,255,0.3); transform: translateX(-2px); }
+
+        .content { padding: 40px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #475569; }
+        
+        .input-box { width: 100%; padding: 16px; border: 2px solid #e2e8f0; border-radius: 16px; font-size: 16px; font-family: inherit; font-weight: 600; transition: 0.3s; box-sizing: border-box; outline: none; background: #fcfcfd; }
+        .input-box:focus { border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1); }
+
+        .grid-3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+        @media (max-width: 600px) { .grid-3 { grid-template-columns: 1fr; } }
+
+        .calculate-btn { width: 100%; background: #0f172a; color: white; border: none; padding: 20px; border-radius: 18px; font-size: 18px; font-weight: 800; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 30px; }
+        .calculate-btn:hover { background: #000; transform: translateY(-2px); box-shadow: 0 15px 30px rgba(15, 23, 42, 0.2); }
+
+        .results { display: none; border-top: 1px solid #f1f5f9; padding-top: 40px; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .result-item { background: #f8fafc; border: 1px solid #f1f5f9; border-radius: 20px; padding: 20px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; }
+        .asset-main { display: flex; align-items: center; gap: 15px; }
+        .asset-icon { width: 54px; height: 54px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 26px; }
+        .asset-meta h4 { margin: 0; font-size: 17px; font-weight: 700; color: #1e293b; }
+        .asset-meta span { font-size: 13px; color: #64748b; font-weight: 500; }
+
+        .asset-pricing { text-align: right; }
+        .price-now { display: block; font-size: 20px; font-weight: 800; color: #1e293b; letter-spacing: -0.5px; }
+        .price-change { font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 8px; display: inline-block; margin-top: 6px; }
+        .up { background: #dcfce7; color: #15803d; }
+        
+        .winner-card { border: 2px solid #fbbf24; background: #fffbeb; }
+        .winner-tag { background: #fbbf24; color: #78350f; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 6px; margin-bottom: 4px; display: inline-block; }
+
+        .disclaimer { font-size: 12px; color: #94a3b8; text-align: center; margin-top: 40px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <!-- Ana Sitemize Dönüş Linki -->
+            <a href="/" class="nav-link"><i class="fa-solid fa-arrow-left"></i> Ana Sayfa</a>
+            
+            <i class="fa-solid fa-money-bill-trend-up fa-3x" style="margin-bottom:15px; opacity:0.8;"></i>
+            <h1>Keşke Alsaydım 💸</h1>
+            <p>Geçmişin pişmanlığını rakamlarla ölçelim.</p>
+        </div>
+
+        <div class="content">
+            <div class="grid-3">
+                <div class="form-group">
+                    <label>Yatırım Tutarı (TL)</label>
+                    <input type="number" id="amount" class="input-box" value="1000">
+                </div>
+                <div class="form-group">
+                    <label>Yıl</label>
+                    <select id="year" class="input-box"></select>
+                </div>
+                <div class="form-group">
+                    <label>Ay</label>
+                    <select id="month" class="input-box"></select>
+                </div>
+            </div>
+
+            <button class="calculate-btn" onclick="hesapla()">
+                HESAPLA VE ÜZÜL <i class="fa-solid fa-bolt"></i>
+            </button>
+
+            <div id="results" class="results"></div>
+
+            <div class="disclaimer">
+                * Veriler yaklaşık aylık piyasa ortalamalarıdır. <br>
+                BIST 100 endeksi, TCMB kur verileri ve borsa ortalamaları baz alınmıştır.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- DETAYLI VERİ SETİ (AYLIK) ---
+        // usd: Dolar Kuru, gold: Gram Altın, bist: Borsa Endeksi, bread: Ekmek Fiyatı, wage: Asgari Ücret
+        const db = {
+            2015: {
+                1: {usd: 2.34, gold: 95, bist: 880, bread: 1.0, wage: 1000},
+                6: {usd: 2.70, gold: 104, bist: 820, bread: 1.0, wage: 1000},
+                9: {usd: 3.05, gold: 110, bist: 750, bread: 1.0, wage: 1000},
+                12: {usd: 2.92, gold: 100, bist: 720, bread: 1.25, wage: 1000}
+            },
+            2016: {
+                1: {usd: 3.00, gold: 108, bist: 730, bread: 1.25, wage: 1300},
+                6: {usd: 2.90, gold: 120, bist: 770, bread: 1.25, wage: 1300},
+                7: {usd: 3.05, gold: 130, bist: 750, bread: 1.25, wage: 1300}, // Darbe girişimi etkisi
+                12: {usd: 3.50, gold: 130, bist: 780, bread: 1.25, wage: 1300}
+            },
+            2017: {
+                1: {usd: 3.75, gold: 145, bist: 850, bread: 1.25, wage: 1404},
+                6: {usd: 3.52, gold: 142, bist: 1000, bread: 1.5, wage: 1404},
+                12: {usd: 3.85, gold: 158, bist: 1100, bread: 1.5, wage: 1404}
+            },
+            2018: {
+                1: {usd: 3.78, gold: 160, bist: 1150, bread: 1.5, wage: 1603},
+                5: {usd: 4.50, gold: 190, bist: 1000, bread: 1.5, wage: 1603},
+                8: {usd: 6.50, gold: 250, bist: 900, bread: 1.5, wage: 1603}, // Brunson Krizi
+                12: {usd: 5.30, gold: 215, bist: 910, bread: 1.75, wage: 1603}
+            },
+            2019: {
+                1: {usd: 5.35, gold: 225, bist: 1000, bread: 1.75, wage: 2020},
+                5: {usd: 6.05, gold: 250, bist: 900, bread: 2.0, wage: 2020},
+                12: {usd: 5.95, gold: 290, bist: 1100, bread: 2.0, wage: 2020}
+            },
+            2020: {
+                1: {usd: 5.95, gold: 300, bist: 1200, bread: 1.5, wage: 2324},
+                3: {usd: 6.40, gold: 330, bist: 900, bread: 1.5, wage: 2324}, // Pandemi başlangıcı
+                8: {usd: 7.30, gold: 460, bist: 1100, bread: 1.75, wage: 2324},
+                11: {usd: 8.50, gold: 530, bist: 1300, bread: 1.75, wage: 2324},
+                12: {usd: 7.70, gold: 450, bist: 1400, bread: 1.75, wage: 2324}
+            },
+            2021: {
+                1: {usd: 7.40, gold: 440, bist: 1500, bread: 2.0, wage: 2825},
+                3: {usd: 7.50, gold: 420, bist: 1400, bread: 2.0, wage: 2825}, // Merkez Bankası değişimi
+                6: {usd: 8.60, gold: 500, bist: 1400, bread: 2.0, wage: 2825},
+                11: {usd: 12.5, gold: 750, bist: 1800, bread: 2.5, wage: 2825},
+                12: {usd: 13.5, gold: 780, bist: 2000, bread: 3.0, wage: 2825} // Kur Korumalı ayı
+            },
+            2022: {
+                1: {usd: 13.5, gold: 790, bist: 2000, bread: 3.0, wage: 4253},
+                4: {usd: 14.7, gold: 920, bist: 2400, bread: 3.5, wage: 4253},
+                7: {usd: 17.5, gold: 980, bist: 2600, bread: 4.0, wage: 5500},
+                10: {usd: 18.5, gold: 1000, bist: 3800, bread: 5.0, wage: 5500},
+                12: {usd: 18.7, gold: 1080, bist: 5400, bread: 5.0, wage: 5500}
+            },
+            2023: {
+                1: {usd: 18.8, gold: 1150, bist: 5000, bread: 5.0, wage: 8506},
+                5: {usd: 19.5, gold: 1250, bist: 4800, bread: 6.0, wage: 8506}, // Seçim öncesi
+                7: {usd: 26.5, gold: 1650, bist: 6500, bread: 7.5, wage: 11402},
+                10: {usd: 28.0, gold: 1800, bist: 7800, bread: 8.0, wage: 11402},
+                12: {usd: 29.3, gold: 1950, bist: 7500, bread: 10.0, wage: 11402}
+            },
+            2024: {
+                1: {usd: 30.2, gold: 2050, bist: 8500, bread: 10.0, wage: 17002},
+                4: {usd: 32.2, gold: 2450, bist: 9800, bread: 10.0, wage: 17002},
+                7: {usd: 33.0, gold: 2550, bist: 11000, bread: 12.5, wage: 17002},
+                10: {usd: 34.3, gold: 3000, bist: 9000, bread: 12.5, wage: 17002},
+                12: {usd: 34.8, gold: 3050, bist: 9500, bread: 15.0, wage: 17002}
+            },
+            2025: {
+                1: {usd: 35.5, gold: 3150, bist: 10100, bread: 15.0, wage: 17002},
+                2: {usd: 36.2, gold: 3250, bist: 10300, bread: 15.0, wage: 17002}
+            }
+        };
+
+        // GÜNCEL VERİLER (Canlı Piyasa - Şubat 2025)
+        const current = {usd: 36.3, gold: 3260, bist: 10400, bread: 15.0, wage: 17002};
+
+        // Yılları ve Ayları Doldur
+        const ySel = document.getElementById('year');
+        const mSel = document.getElementById('month');
+        const months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+
+        // 2025'ten 2015'e kadar yılları döngüye al
+        for(let y=2025; y>=2015; y--) ySel.innerHTML += `<option value="${y}">${y}</option>`;
+        months.forEach((m, i) => mSel.innerHTML += `<option value="${i+1}">${m}</option>`);
+
+        function hesapla() {
+            const amt = parseFloat(document.getElementById('amount').value);
+            const y = ySel.value;
+            const m = parseInt(mSel.value);
+            
+            // Veri Fallback Sistemi (Eğer o ay yoksa en yakınını bul)
+            let data = db[y][m];
+            if(!data) {
+                // O yılın mevcut anahtarlarını (aylarını) al
+                const availableMonths = Object.keys(db[y]).map(Number);
+                // Seçilen aya en yakın olan ayı bul
+                const closest = availableMonths.reduce((prev, curr) => {
+                    return (Math.abs(curr - m) < Math.abs(prev - m) ? curr : prev);
+                });
+                data = db[y][closest];
+            }
+
+            const resDiv = document.getElementById('results');
+            resDiv.style.display = 'block';
+            resDiv.innerHTML = "";
+
+            const options = [
+                {id: 'gold', name: 'Gram Altın', icon: 'fa-coins', color: '#fbbf24', unit: 'Gr'},
+                {id: 'usd', name: 'Amerikan Doları', icon: 'fa-dollar-sign', color: '#10b981', unit: '$'},
+                {id: 'bist', name: 'Borsa İstanbul', icon: 'fa-chart-column', color: '#6366f1', unit: 'Lot'},
+                {id: 'bread', name: 'Ekmek (Adet)', icon: 'fa-bread-slice', color: '#f97316', unit: 'Adet'},
+                {id: 'wage', name: 'Asgari Ücret', icon: 'fa-wallet', color: '#ec4899', unit: 'Maaş'}
+            ];
+
+            let items = options.map(opt => {
+                let qty = amt / data[opt.id];
+                let valNow = qty * current[opt.id];
+                let perc = ((valNow - amt) / amt) * 100;
+                return {...opt, qty, valNow, perc};
+            });
+
+            items.sort((a,b) => b.valNow - a.valNow);
+
+            items.forEach((item, i) => {
+                resDiv.innerHTML += `
+                    <div class="result-item ${i === 0 ? 'winner-card' : ''}">
+                        <div class="asset-main">
+                            <div class="asset-icon" style="background:${item.color}20; color:${item.color}">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                            <div class="asset-meta">
+                                ${i === 0 ? '<span class="winner-tag">🏆 EN ÇOK KAZANDIRAN</span>' : ''}
+                                <h4>${item.name}</h4>
+                                <span>${item.qty.toFixed(2)} ${item.unit} alabiliyordun</span>
+                            </div>
+                        </div>
+                        <div class="asset-pricing">
+                            <span class="price-now">${item.valNow.toLocaleString('tr-TR', {maximumFractionDigits:0})} TL</span>
+                            <span class="price-change up">+%${item.perc.toFixed(0)}</span>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>
