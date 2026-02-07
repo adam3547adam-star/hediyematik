@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kombi Basıncı Neden Düşüyor? (1.5 Bar Altı) | Xenon Country</title>
+    <meta name="description" content="Kombi su basıncı sürekli düşüyor mu? Tesisat kaçağı mı yoksa genleşme tankı mı? Basit arıza tespit rehberi.">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
+
+    <!-- GOOGLE ANALYTICS (G-5N5SDYX95K) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N5SDYX95K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5N5SDYX95K');
+    </script>
+    
+    <!-- GOOGLE ADSENSE -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8335171074656428" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root { --bg: #f8fafc; --text: #0f172a; --accent: #f97316; --border: #e2e8f0; } /* Kombi Turuncusu */
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.7; }
+        
+        /* Header & Nav */
+        header { background: #fff; border-bottom: 1px solid var(--border); padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 22px; font-weight: 900; color: #0f172a; text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, #0f172a, #334155); color: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        
+        .container { max-width: 1100px; margin: 40px auto; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; padding: 0 20px; }
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+
+        /* Makale İçeriği */
+        .article-header h1 { font-size: 32px; font-weight: 900; line-height: 1.3; margin-bottom: 15px; }
+        .meta-info { font-size: 14px; color: #64748b; margin-bottom: 30px; display: flex; gap: 15px; align-items: center; }
+        .featured-img { width: 100%; height: 400px; object-fit: cover; border-radius: 20px; margin-bottom: 30px; background: linear-gradient(45deg, #f97316, #ea580c, #c2410c); display: flex; align-items: center; justify-content: center; color: white; font-size: 80px; }
+        
+        .content-body { font-size: 17px; color: #334155; }
+        .content-body h2 { font-size: 24px; font-weight: 800; color: #0f172a; margin-top: 40px; margin-bottom: 15px; }
+        .content-body p { margin-bottom: 20px; }
+        .content-body ul { margin-bottom: 20px; padding-left: 20px; }
+        .content-body li { margin-bottom: 10px; }
+        
+        /* Teşhis Kutusu */
+        .diagnosis-box { background: #fff7ed; border: 2px solid #fdba74; padding: 25px; border-radius: 12px; margin: 30px 0; }
+        .diag-title { font-weight: 800; color: #c2410c; font-size: 18px; margin-bottom: 15px; display: block; }
+        .scenario { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #fdba74; }
+        .scenario:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .scenario strong { color: #ea580c; }
+
+        /* Sidebar Araçlar */
+        .sidebar-widget { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 25px; margin-bottom: 30px; position: sticky; top: 100px; }
+        .tool-link { display: flex; align-items: center; gap: 15px; text-decoration: none; color: var(--text); padding: 15px; border-radius: 12px; background: #f8fafc; border: 1px solid transparent; transition: 0.2s; margin-bottom: 10px; }
+        .tool-link:hover { border-color: #ff6000; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .tool-icon { width: 40px; height: 40px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #ff6000; }
+        
+        footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; margin-top: 60px; font-size: 14px; color: #64748b; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-atom"></i></div>
+                Xenon Country
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- SOL: MAKALE -->
+        <main>
+            <article>
+                <header class="article-header">
+                    <h1>Kombi Basıncı Neden Sürekli Düşüyor? (1.5 Bar Altı)</h1>
+                    <div class="meta-info">
+                        <span><i class="fa-regular fa-calendar"></i> 07 Şubat 2025</span>
+                        <span>• Ev & Yaşam</span>
+                        <span>• 5 dk okuma</span>
+                    </div>
+                </header>
+
+                <div class="featured-img">
+                    <i class="fa-solid fa-fire-burner"></i>
+                </div>
+
+                <div class="content-body">
+                    <p>Kombinizin ibresi yine mi 1.0 barın altına düştü? Altındaki vanayı açıp su basmaktan yoruldunuz mu? "Kesin evde su kaçağı var" diye korkmadan önce bu rehberi okuyun. Çünkü suçlu parkelerin altındaki borular olmayabilir.</p>
+
+                    <div class="diagnosis-box">
+                        <span class="diag-title">🔍 Hızlı Teşhis Rehberi</span>
+                        
+                        <div class="scenario">
+                            <strong>Senaryo 1: Basınç Sadece Kombi Çalışınca Yükseliyor, Soğuyunca Düşüyor</strong><br>
+                            Bu en klasik durumdur. Kombi yanarken 2.5 bara çıkar, sönünce 0.5 bara düşer.<br>
+                            👉 <strong>Sorun:</strong> Genleşme Tankı. Havası bitmiş veya patlamış. (Maliyet: Düşük)
+                        </div>
+
+                        <div class="scenario">
+                            <strong>Senaryo 2: Basınç Her Gün Yavaş Yavaş Düşüyor</strong><br>
+                            Kombi çalışsa da çalışmasa da 2-3 günde bir su basmanız gerekiyor.<br>
+                            👉 <strong>Sorun:</strong> Çok ufak bir sızıntı. Radyatör vanalarını veya kombi altındaki boruları peçete ile kontrol edin.
+                        </div>
+
+                        <div class="scenario">
+                            <strong>Senaryo 3: Basınç Aniden Sıfırlanıyor</strong><br>
+                            Suyu basıyorsunuz, 1 saat sonra yine yok.<br>
+                            👉 <strong>Sorun:</strong> Emniyet Ventili arızası veya ciddi tesisat kaçağı. (Uzman gerekli)
+                        </div>
+                    </div>
+
+                    <h2>Genleşme Tankı Nedir?</h2>
+                    <p>Kombinin arkasında, içinde balon gibi hava olan kırmızı/gri bir tank vardır. Su ısınınca genleşir, bu tank o fazlalığı emer. Eğer tankın havası biterse, genleşen suyun gidecek yeri kalmaz ve emniyet ventilinden dışarı atılır. Kombi soğuyunca da su eksik kalır ve basınç düşer.</p>
+                    <p><strong>Çözüm:</strong> Kombi servisi çağırıp tanka hava bastırmak (bisiklet pompasıyla bile basıyorlar). Parça değişimi gerekmiyorsa en ucuz işlem budur.</p>
+
+                    <h2>Su Kaçağı Nasıl Bulunur?</h2>
+                    <p>Eğer sorun tankta değilse, evde kaçak olabilir. Ama hemen parkeleri kırdırmayın. Termal kamera ile kaçak tespiti yapan firmalar, kırmadan dökmeden noktasal tespit yapabilir.</p>
+                </div>
+            </article>
+        </main>
+
+        <!-- SAĞ: ARAÇLAR + REKLAM -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 style="margin-top:0; font-size:16px;">🔥 Hazır Beklerken...</h3>
+                
+                <a href="/hediye/" class="tool-link">
+                    <div class="tool-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <div class="tool-info">
+                        <h4>Hediye Sihirbazı</h4>
+                        <p>Kime ne alacağını yapay zeka bulsun.</p>
+                    </div>
+                </a>
+
+                <a href="/yatirim/" class="tool-link">
+                    <div class="tool-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="tool-info">
+                        <h4>Geçmiş Yatırım</h4>
+                        <p>"Keşke dolar alsaydım" deme, hesapla!</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ADSENSE REKLAM ALANI -->
+            <div class="sidebar-widget" style="text-align:center; padding:10px; min-height:280px; width:100%; box-sizing:border-box;">
+                <p style="font-size:12px; color:#cbd5e1; margin-bottom:5px;">Reklam</p>
+                <ins class="adsbygoogle"
+                     style="display:block; width:100%;"
+                     data-ad-client="ca-pub-8335171074656428"
+                     data-ad-slot="1234567890"  
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Xenon Country. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
