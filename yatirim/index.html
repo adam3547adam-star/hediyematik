@@ -15,8 +15,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yatırım Sihirbazı | Xenon Country</title>
-    <meta name="description" content="Geçmişte dolar, altın veya bitcoin alsaydınız ne kadar paranız olurdu? Hesaplayın ve üzülün.">
+    <title>Keşke Alsaydım: Geçmiş Yatırım Hesaplama Aracı | Xenon Country</title>
+    <meta name="description" content="Geçmişte dolar, altın veya bitcoin alsaydınız ne kadar paranız olurdu? Hesaplayın ve üzülün. Finansal pişmanlık hesaplayıcısı.">
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
     
@@ -72,6 +72,10 @@
         .nostalgia-content h4 { margin: 0 0 5px 0; color: #115e59; font-weight: 800; font-size: 16px; }
         .nostalgia-text { font-size: 14px; color: #134e4a; line-height: 1.5; margin: 0; }
 
+        /* WhatsApp Share Butonu */
+        .share-whatsapp { background: #25D366; color: white; width: 100%; border: none; padding: 15px; border-radius: 16px; font-weight: 800; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 25px; text-decoration: none; transition: 0.2s; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2); }
+        .share-whatsapp:hover { background: #128C7E; transform: translateY(-2px); }
+
         .disclaimer { font-size: 12px; color: #94a3b8; text-align: center; margin-top: 40px; line-height: 1.6; }
     </style>
 </head>
@@ -103,7 +107,7 @@
             </div>
 
             <button class="calculate-btn" onclick="hesapla()">
-                HESAPLA VE ÜZÜL <i class="fa-solid fa-bolt"></i>
+                HESAPLA <i class="fa-solid fa-bolt"></i>
             </button>
 
             <div id="results" class="results"></div>
@@ -314,6 +318,17 @@
 
             document.getElementById('nostalgia-text').innerHTML = msg;
             document.getElementById('nostalgia').style.display = 'flex';
+
+            // SHARE BUTTON ADDITION
+            const winner = items[0];
+            const shareMsg = `😱 İnanılmaz! ${y} yılında ${amt} TL ile ${winner.name} alsaydım, şu an tam ${winner.valNow.toLocaleString('tr-TR', {maximumFractionDigits:0})} TL param vardı! \n\nSenin pişmanlık skorun ne? 👇\nhttps://xenoncountry.com/yatirim/`;
+            
+            // Butonu tekrar tekrar eklememek için kontrol edelim veya her hesaplamada results div'i sıfırlandığı için direkt ekleyelim.
+            resDiv.innerHTML += `
+                <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(shareMsg)}" target="_blank" class="share-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Sonucu WhatsApp'ta Paylaş
+                </a>
+            `;
         }
     </script>
 </body>
