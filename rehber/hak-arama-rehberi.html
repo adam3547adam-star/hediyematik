@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otomatik Tüketici Dilekçesi Oluşturucu | Xenon Country</title>
-    <meta name="description" content="Tüketici Hakem Heyeti veya Banka İtiraz dilekçenizi saniyeler içinde oluşturun. Kanun maddeleri eklenmiş, hazır hukuk formatı.">
+    <title>Otomatik Resmi Dilekçe Oluşturucu (Pro) | Xenon Country</title>
+    <meta name="description" content="Tüketici, İşçi, Kiracı ve Trafik cezası dilekçelerinizi saniyeler içinde oluşturun. Kanun maddeli, resmi formatta hazır dilekçe sihirbazı.">
 
     <!-- FAVICON -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
@@ -36,53 +36,58 @@
         /* MAIN LAYOUT */
         .app-container { 
             max-width: 1200px; margin: 40px auto; padding: 0 20px; 
-            display: grid; grid-template-columns: 350px 1fr; gap: 40px;
+            display: grid; grid-template-columns: 380px 1fr; gap: 40px;
         }
         @media (max-width: 900px) { .app-container { grid-template-columns: 1fr; } }
 
         /* LEFT: FORM */
-        .form-panel { background: #fff; padding: 25px; border-radius: 16px; border: 1px solid #e2e8f0; height: fit-content; }
+        .form-panel { background: #fff; padding: 25px; border-radius: 16px; border: 1px solid #e2e8f0; height: fit-content; position: sticky; top: 20px; }
         .panel-title { font-size: 18px; font-weight: 800; margin-bottom: 20px; color: #1e293b; display: flex; align-items: center; gap: 10px; }
         
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; font-size: 13px; font-weight: 600; color: #64748b; margin-bottom: 5px; }
         .form-group input, .form-group select, .form-group textarea { 
-            width: 100%; padding: 10px; border: 2px solid #e2e8f0; border-radius: 8px; 
-            font-size: 14px; transition: 0.2s; font-family: 'Inter', sans-serif;
+            width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 8px; 
+            font-size: 14px; transition: 0.2s; font-family: 'Inter', sans-serif; box-sizing: border-box;
         }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { 
             border-color: var(--accent); outline: none; background: #f8fafc;
         }
 
+        /* OPTGROUP STYLING */
+        optgroup { font-weight: 800; color: #1e293b; font-style: normal; }
+        option { font-weight: 400; color: #000; padding: 5px; }
+
         .action-btn { 
-            width: 100%; background: var(--accent); color: white; border: none; padding: 12px; 
-            border-radius: 8px; font-weight: 700; cursor: pointer; margin-top: 10px; 
-            display: flex; align-items: center; justify-content: center; gap: 8px;
+            width: 100%; background: var(--accent); color: white; border: none; padding: 14px; 
+            border-radius: 8px; font-weight: 700; cursor: pointer; margin-top: 15px; 
+            display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px;
         }
         .action-btn:hover { background: #1d4ed8; }
-        .reset-btn { background: #cbd5e1; color: #475569; margin-top: 10px; }
-        .reset-btn:hover { background: #94a3b8; color: #fff; }
+        
+        /* DYNAMIC HINT BOX */
+        .hint-box { background: #fff7ed; border-left: 4px solid #f97316; padding: 12px; border-radius: 6px; font-size: 12px; color: #9a3412; margin-bottom: 15px; display: none; }
 
         /* RIGHT: PREVIEW (PAPER) */
         .preview-panel { display: flex; flex-direction: column; gap: 20px; }
         
         .paper { 
-            background: var(--paper); padding: 60px; min-height: 800px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-radius: 4px;
+            background: var(--paper); padding: 70px; min-height: 800px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06); border-radius: 4px; border: 1px solid #e2e8f0;
             font-family: 'Noto Serif', serif; color: #000; position: relative;
         }
         @media (max-width: 600px) { .paper { padding: 30px; } }
 
         /* Paper Content */
-        .paper-header { text-align: center; font-weight: 700; margin-bottom: 40px; text-transform: uppercase; font-size: 16px; line-height: 1.5; }
+        .paper-header { text-align: center; font-weight: 700; margin-bottom: 50px; text-transform: uppercase; font-size: 16px; line-height: 1.6; letter-spacing: 0.5px; }
         .paper-body { font-size: 15px; line-height: 1.8; text-align: justify; }
-        .paper-footer { margin-top: 50px; display: flex; justify-content: flex-end; }
-        .signature-block { text-align: center; width: 200px; }
+        .paper-footer { margin-top: 60px; display: flex; justify-content: flex-end; padding-right: 20px; }
+        .signature-block { text-align: center; width: 220px; }
         
-        .highlight-placeholder { background: #fef08a; padding: 0 4px; border-radius: 2px; } /* Kullanıcı görsün diye sarı */
+        .highlight-placeholder { background: #fef08a; padding: 0 4px; border-radius: 2px; }
 
-        /* TOOLTIPS */
-        .info-tip { font-size: 12px; color: #64748b; margin-top: 5px; line-height: 1.4; }
+        .print-btn { background: #475569; margin-top: 10px; }
+        .print-btn:hover { background: #334155; }
 
         footer { text-align: center; margin-top: 60px; font-size: 13px; color: #94a3b8; padding-bottom: 40px; }
     </style>
@@ -99,50 +104,83 @@
         
         <!-- SOL PANEL: VERİ GİRİŞİ -->
         <div class="form-panel">
-            <div class="panel-title"><i class="fa-solid fa-pen-nib"></i> Bilgileri Girin</div>
+            <div class="panel-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Dilekçe Sihirbazı</div>
             
             <div class="form-group">
-                <label>Şikayet Türü</label>
+                <label>1. Dilekçe Konusu Seçin</label>
                 <select id="typeSelect" onchange="updateTemplate()">
-                    <option value="ayipli_mal">Ayıplı/Bozuk Ürün (İade/Değişim)</option>
-                    <option value="kargo_hasar">Kargo Hasarlı Geldi</option>
-                    <option value="banka_itiraz">Banka Kartı Harcama İtirazı</option>
-                    <option value="abonelik_iptal">İnternet/Abonelik İptali</option>
+                    <optgroup label="Tüketici Hakları">
+                        <option value="ayipli_mal">Ayıplı/Bozuk Ürün İadesi</option>
+                        <option value="kargo_hasar">Kargo Hasarlı Geldi</option>
+                        <option value="abonelik_iptal">İnternet/GSM Abonelik İptali</option>
+                        <option value="cayma_bedeli">Taahhüt Cayma Bedeli İtirazı</option>
+                    </optgroup>
+                    <optgroup label="Banka & Finans">
+                        <option value="banka_itiraz">Kredi Kartı Harcama İtirazı</option>
+                        <option value="dosya_masrafi">Dosya Masrafı/Sigorta İadesi</option>
+                    </optgroup>
+                    <optgroup label="Sağlık & Eğitim (Yeni)">
+                        <option value="saglik_hata">Hastane/Doktor Şikayeti</option>
+                        <option value="okul_sikayet">Okul/Öğretmen Şikayeti</option>
+                    </optgroup>
+                    <optgroup label="İşçi Hakları (İş Hukuku)">
+                        <option value="maas_istifa">Maaş Ödenmemesi (Haklı Fesih)</option>
+                        <option value="kidem_tazminati">Kıdem Tazminatı Talebi</option>
+                        <option value="mobbing">Mobbing Bildirimi (İK'ya)</option>
+                    </optgroup>
+                    <optgroup label="Kiracı & Konut">
+                        <option value="kira_artis_itiraz">Fahiş Kira Artışına İtiraz</option>
+                        <option value="depozito_iade">Depozito İadesi Talebi</option>
+                    </optgroup>
+                    <optgroup label="İdari & KVKK">
+                        <option value="trafik_ceza">Trafik Cezasına İtiraz</option>
+                        <option value="kvkk_sikayet">İzinsiz SMS/Arama Şikayeti</option>
+                    </optgroup>
                 </select>
             </div>
 
+            <div id="hintBox" class="hint-box"></div>
+
             <div class="form-group">
-                <label>Kurum Adı (Şikayet Edilen)</label>
-                <input type="text" id="companyName" placeholder="Örn: X Teknoloji A.Ş." oninput="updatePreview()">
+                <label>2. Kurum / Muhatap Adı</label>
+                <input type="text" id="companyName" placeholder="Örn: X Teknoloji A.Ş. veya Sulh Ceza Hakimliği" oninput="updatePreview()">
             </div>
 
             <div class="form-group">
-                <label>Tarih (Olay Günü)</label>
+                <label>3. Tarih (Olay/Fatura Günü)</label>
                 <input type="date" id="eventDate" oninput="updatePreview()">
             </div>
 
             <div class="form-group">
-                <label>Ürün/Hizmet Bedeli (TL)</label>
+                <label>4. Tutar / Bedel (Varsa)</label>
                 <input type="number" id="price" placeholder="Örn: 5000" oninput="updatePreview()">
             </div>
 
             <div class="form-group">
-                <label>Kısa Açıklama (Olayı Özetleyin)</label>
-                <textarea id="description" rows="3" placeholder="Örn: Ürünü kutudan çıkardığımda ekranı kırıktı..." oninput="updatePreview()"></textarea>
+                <label>5. Detaylı Açıklama (Olayın Hikayesi)</label>
+                <textarea id="description" rows="4" placeholder="Olayı kısaca anlatın..." oninput="updatePreview()"></textarea>
             </div>
+
+            <hr style="margin: 20px 0; border:0; border-top:1px dashed #e2e8f0;">
 
             <div class="form-group">
                 <label>Adınız Soyadınız</label>
                 <input type="text" id="userName" placeholder="Ad Soyad" oninput="updatePreview()">
             </div>
 
+            <!-- TC NO AYRILDI -->
             <div class="form-group">
-                <label>T.C. Kimlik / Adres</label>
-                <textarea id="userAddress" rows="2" placeholder="Adresiniz..." oninput="updatePreview()"></textarea>
+                <label>T.C. Kimlik No</label>
+                <input type="text" id="tcNo" placeholder="11 Haneli T.C. Numaranız" maxlength="11" oninput="updatePreview()">
+            </div>
+
+            <div class="form-group">
+                <label>Adresiniz</label>
+                <textarea id="userAddress" rows="2" placeholder="Tam açık adresiniz..." oninput="updatePreview()"></textarea>
             </div>
 
             <button class="action-btn" onclick="copyToClipboard()"><i class="fa-regular fa-copy"></i> Metni Kopyala</button>
-            <p class="info-tip">*Kopyaladığınız metni e-Devlet (TÜBİS) veya CİMER başvuru ekranına yapıştırabilirsiniz.</p>
+            <button class="action-btn print-btn" onclick="window.print()"><i class="fa-solid fa-print"></i> Yazdır / PDF Yap</button>
         </div>
 
         <!-- SAĞ PANEL: CANLI ÖNİZLEME -->
@@ -153,33 +191,35 @@
                 </div>
 
                 <div class="paper-body">
-                    <p><strong>ŞİKAYET EDEN:</strong> <span id="prevName" class="highlight-placeholder">Adınız Soyadınız</span></p>
+                    <p><strong>TALEP EDEN:</strong> <span id="prevName" class="highlight-placeholder">Adınız Soyadınız</span></p>
+                    <p><strong>T.C. KİMLİK NO:</strong> <span id="prevTC" class="highlight-placeholder">11111111111</span></p>
                     <p><strong>ADRES:</strong> <span id="prevAddress" class="highlight-placeholder">Adresiniz</span></p>
-                    <p><strong>ŞİKAYET EDİLEN:</strong> <span id="prevCompany" class="highlight-placeholder">Firma Adı</span></p>
+                    <p><strong>MUHATAP:</strong> <span id="prevCompany" class="highlight-placeholder">Kurum Adı</span></p>
                     <p><strong>KONU:</strong> <span id="prevSubject">Ayıplı malın bedel iadesi talebidir.</span></p>
-                    <p><strong>UYUŞMAZLIK BEDELİ:</strong> <span id="prevPrice" class="highlight-placeholder">0</span> TL</p>
+                    <p id="priceRow"><strong>BEDEL:</strong> <span id="prevPrice" class="highlight-placeholder">0</span> TL</p>
                     
-                    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #000;">
+                    <hr style="margin: 25px 0; border: 0; border-top: 1px solid #000;">
 
                     <p><strong>AÇIKLAMALAR:</strong></p>
                     <p>
-                        <span id="prevDate" class="highlight-placeholder">[Tarih]</span> tarihinde, şikayet edilen firmadan <span id="prevPriceText">[Tutar]</span> bedel karşılığında ürün/hizmet satın aldım.
+                        <span id="prevDate" class="highlight-placeholder">[Tarih]</span> tarihinde, muhatap kurum/kişi ile yaşanan olay neticesinde mağduriyet yaşamış bulunmaktayım.
                     </p>
-                    <p id="dynamicLegalText">
-                        Ancak ürün elime ulaştığında ayıplı/bozuk olduğu anlaşılmıştır. 6502 Sayılı Tüketicinin Korunması Hakkında Kanun'un 11. maddesi gereğince "Seçimlik Haklarım"dan olan bedel iadesi/değişim talebimi firmaya iletmeme rağmen olumlu sonuç alamadım.
-                    </p>
-                    <p>
-                        Olayın detayı şöyledir: <span id="prevDesc" class="highlight-placeholder">...</span>
+                    <p id="dynamicLegalText" style="margin: 15px 0; font-weight: 500;">
+                        <!-- Kanun Maddesi Buraya Gelecek -->
+                        6502 Sayılı Tüketicinin Korunması Hakkında Kanun'un 11. maddesi gereğince...
                     </p>
                     <p>
-                        Yukarıda açıklanan nedenlerle, mağduriyetimin giderilmesini ve ödediğim bedelin tarafıma iadesini saygılarımla arz ederim.
+                        Olayın özeti şöyledir: <span id="prevDesc" class="highlight-placeholder">...</span>
+                    </p>
+                    <p>
+                        Yukarıda arz ve izah edilen nedenlerle; mağduriyetimin giderilmesini ve yasal haklarımın tarafıma iadesini saygılarımla arz ve talep ederim.
                     </p>
                 </div>
 
                 <div class="paper-footer">
                     <div class="signature-block">
                         <p id="signDate">08.02.2025</p>
-                        <p style="margin-top:20px;"><strong><span id="signName">Ad Soyad</span></strong></p>
+                        <p style="margin-top:25px;"><strong><span id="signName">Ad Soyad</span></strong></p>
                         <p>İmza</p>
                     </div>
                 </div>
@@ -189,63 +229,191 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Xenon Country. Oluşturulan metinler hukuki tavsiye niteliğinde değildir, taslak amaçlıdır.</p>
+        <p>&copy; 2025 Xenon Country. Oluşturulan metinler hukuki tavsiye niteliğinde değildir. Resmi işlemlerinizde avukatınıza danışınız.</p>
     </footer>
 
     <script>
-        // Sayfa yüklendiğinde bugünün tarihini at
+        // Bugünün Tarihi
         document.getElementById('signDate').innerText = new Date().toLocaleDateString('tr-TR');
 
+        // DİLEKÇE ŞABLONLARI (DEV KADRO)
         const templates = {
+            // TÜKETİCİ
             'ayipli_mal': {
                 header: 'T.C.<br>TÜKETİCİ HAKEM HEYETİ BAŞKANLIĞINA',
                 subject: 'Ayıplı malın bedel iadesi veya misli ile değişimi talebidir.',
-                legal: '6502 Sayılı Tüketicinin Korunması Hakkında Kanun\'un 8. ve 11. maddeleri uyarınca; malın ayıplı olduğunun anlaşılması durumunda tüketici, bedel iadesi hakkına sahiptir. Satıcı, ayıplı maldan sorumludur.'
+                legal: '6502 Sayılı Tüketicinin Korunması Hakkında Kanun\'un 8. ve 11. maddeleri uyarınca; malın ayıplı olduğunun anlaşılması durumunda tüketici, bedel iadesi hakkına sahiptir.',
+                hint: 'Muhatap kısmına Satıcı Firmanın tam adını yazın.'
             },
             'kargo_hasar': {
                 header: 'T.C.<br>TÜKETİCİ HAKEM HEYETİ BAŞKANLIĞINA',
                 subject: 'Kargoda hasar gören ürünün tazmini talebidir.',
-                legal: 'Mesafeli Sözleşmeler Yönetmeliği gereği, ürün tüketiciye teslim edilene kadar satıcının sorumluluğundadır. Kargo hasarlı teslim edilmiş olup, satıcı sorumluluğunu yerine getirmemiştir.'
-            },
-            'banka_itiraz': {
-                header: 'TÜRKİYE BANKALAR BİRLİĞİ<br>BİREYSEL MÜŞTERİ HAKEM HEYETİNE',
-                subject: 'Hatalı/İzinsiz kart işleminin iadesi talebidir.',
-                legal: '5464 Sayılı Banka Kartları ve Kredi Kartları Kanunu gereğince, rızam ve bilgim dışında gerçekleşen bu işlemin iptalini ve tutarın tarafıma iadesini talep ediyorum.'
+                legal: 'Mesafeli Sözleşmeler Yönetmeliği gereği, ürün tüketiciye teslim edilene kadar satıcının sorumluluğundadır. Ürün tarafıma hasarlı teslim edilmiştir.',
+                hint: 'Tutanak tutulduysa açıklama kısmında belirtmeyi unutmayın.'
             },
             'abonelik_iptal': {
                 header: 'T.C.<br>TÜKETİCİ HAKEM HEYETİ BAŞKANLIĞINA',
-                subject: 'Abonelik feshi ve haksız cayma bedeli iadesi talebidir.',
-                legal: 'Tüketici Kanunu ve Abonelik Sözleşmeleri Yönetmeliği uyarınca; taahhütlü aboneliklerde hizmetin ayıplı olması veya mücbir sebepler durumunda tüketicinin cezai şart ödemeksizin fesih hakkı bulunmaktadır.'
+                subject: 'Abonelik feshi ve hizmet iptali talebidir.',
+                legal: 'Abonelik Sözleşmeleri Yönetmeliği uyarınca, hizmetin ayıplı olması veya mücbir sebepler durumunda tüketicinin sözleşmeyi feshetme hakkı saklıdır.',
+                hint: 'Abone Numaranızı açıklamaya ekleyin.'
+            },
+            'cayma_bedeli': {
+                header: 'T.C.<br>TÜKETİCİ HAKEM HEYETİ BAŞKANLIĞINA',
+                subject: 'Haksız yansıtılan cayma bedelinin iptali/iadesi talebidir.',
+                legal: 'Tüketici Kanunu gereği; taahhütlü aboneliklerde hizmetin vaat edilen hızda/kalitede verilmemesi durumunda tüketici cezai şart ödemeksizin fesih hakkına sahiptir.',
+                hint: 'Hız testi sonuçlarınız varsa ekleyin.'
+            },
+
+            // SAĞLIK & EĞİTİM (YENİ)
+            'saglik_hata': {
+                header: 'İL SAĞLIK MÜDÜRLÜĞÜNE / HASTANE BAŞHEKİMLİĞİNE',
+                subject: 'Sağlık hizmetinde yaşanan aksaklık ve hasta hakları ihlali şikayetidir.',
+                legal: 'Hasta Hakları Yönetmeliği ve ilgili mevzuat çerçevesinde; sağlık hizmetinin standartlara uygun, özenli ve saygın bir şekilde sunulması esastır. Yaşanan mağduriyet hasta haklarına aykırıdır.',
+                hint: 'Hangi hastane, bölüm ve (biliyorsanız) doktor ismini belirtin.'
+            },
+            'okul_sikayet': {
+                header: 'İLÇE MİLLİ EĞİTİM MÜDÜRLÜĞÜNE',
+                subject: 'Eğitim kurumundaki tutum/davranış ve eğitim kusuru hakkında şikayet.',
+                legal: '1739 Sayılı Milli Eğitim Temel Kanunu ve ilgili yönetmelikler gereği; eğitim ortamının pedagojik ilkelere uygun ve güvenli olması, eğitimcilerin mesleki etik kurallara riayet etmesi gerekmektedir.',
+                hint: 'Okul adını ve şikayetçi olunan personeli belirtin.'
+            },
+
+            // KVKK (YENİ)
+            'kvkk_sikayet': {
+                header: 'KİŞİSEL VERİLERİ KORUMA KURUMU (KVKK) BAŞKANLIĞINA',
+                subject: 'İzinsiz SMS/Arama ve kişisel veri ihlali şikayetidir.',
+                legal: '6698 Sayılı Kişisel Verilerin Korunması Kanunu uyarınca; açık rızam olmaksızın kişisel verilerimin (telefon no) işlenmesi ve tarafıma ticari ileti gönderilmesi hukuka aykırıdır.',
+                hint: 'Sizi arayan numarayı ve firma adını yazın. Ekran görüntüsü varsa "Ektedir" deyin.'
+            },
+
+            // FİNANS
+            'banka_itiraz': {
+                header: 'TÜRKİYE BANKALAR BİRLİĞİ<br>BİREYSEL MÜŞTERİ HAKEM HEYETİNE',
+                subject: 'Hatalı/İzinsiz kart işleminin iadesi talebidir.',
+                legal: '5464 Sayılı Banka Kartları ve Kredi Kartları Kanunu gereğince, rızam ve bilgim dışında gerçekleşen bu işlemin iptalini ve tutarın iadesini talep ediyorum.',
+                hint: 'Bankaya daha önce başvurdunuz mu? Ret cevabı aldıysanız tarihini yazın.'
+            },
+            'dosya_masrafi': {
+                header: 'T.C.<br>TÜKETİCİ HAKEM HEYETİ BAŞKANLIĞINA',
+                subject: 'Kredi dosya masrafı/sigorta bedelinin iadesi talebidir.',
+                legal: 'Yargıtay içtihatları ve Tüketici Kanunu uyarınca, haksız şart niteliğindeki kesintilerin iadesi gerekmektedir.',
+                hint: 'Kesinti yapılan dekont tarihini girin.'
+            },
+
+            // İŞÇİ
+            'maas_istifa': {
+                header: 'MUHATAP: [FİRMA ADI] İNSAN KAYNAKLARI MÜDÜRLÜĞÜNE',
+                subject: 'İHTARNAME: Ücretlerin ödenmemesi nedeniyle haklı fesih bildirimidir.',
+                legal: '4857 Sayılı İş Kanunu\'nun 24/II-e maddesi uyarınca; ücretimin kanun hükümleri veya sözleşme şartlarına uygun ödenmemesi nedeniyle iş akdimi HAKLI NEDENLE derhal feshediyorum.',
+                hint: 'Hangi ayların maaşının yatmadığını detaylı yazın.'
+            },
+            'kidem_tazminati': {
+                header: 'MUHATAP: [FİRMA ADI] YÖNETİMİNE',
+                subject: 'Kıdem tazminatı ve yasal haklarımın ödenmesi talebidir.',
+                legal: '1475 Sayılı İş Kanunu\'nun 14. maddesi gereğince, iş akdinin sonlanmasıyla hak kazandığım kıdem tazminatımın banka hesabıma yatırılmasını ihtar ederim.',
+                hint: 'İşe giriş ve çıkış tarihlerinizi mutlaka belirtin.'
+            },
+            'mobbing': {
+                header: 'İNSAN KAYNAKLARI DİREKTÖRLÜĞÜNE',
+                subject: 'İş yerinde psikolojik taciz (Mobbing) bildirimi.',
+                legal: 'Türk Borçlar Kanunu Madde 417 ve İş Kanunu yükümlülükleri gereği; işçinin kişiliğinin korunması ve psikolojik tacizin önlenmesi işverenin sorumluluğundadır.',
+                hint: 'Size kimin, nasıl baskı yaptığını somut örneklerle yazın.'
+            },
+
+            // KİRACI
+            'kira_artis_itiraz': {
+                header: 'MUHATAP: [EV SAHİBİ ADI]\'NE',
+                subject: 'Yasal sınırı aşan kira artış talebine itirazımdır.',
+                legal: 'Türk Borçlar Kanunu ve ilgili yasal düzenlemeler gereği, yenilenen kira dönemlerinde artış oranı yasal sınırları (TÜFE ortalaması) aşamaz.',
+                hint: 'Mevcut kiranızı ve talep edilen kirayı yazın.'
+            },
+            'depozito_iade': {
+                header: 'MUHATAP: [EV SAHİBİ ADI]\'NE',
+                subject: 'Kira sözleşmesinin bitimi ve güvence bedeli (depozito) iadesi.',
+                legal: 'Türk Borçlar Kanunu gereği; kiralanan taşınmaz eksiksiz ve hasarsız olarak tahliye edilmiş olup, depozitonun tarafıma iadesini talep ederim.',
+                hint: 'Anahtarı teslim ettiğiniz tarihi belirtin.'
+            },
+
+            // TRAFİK
+            'trafik_ceza': {
+                header: 'NÖBETÇİ SULH CEZA HAKİMLİĞİNE',
+                subject: 'İdari para cezasına (Trafik Cezası) itirazımdır.',
+                legal: '5326 Sayılı Kabahatler Kanunu ve Karayolları Trafik Kanunu hükümleri çerçevesinde; gıyabımda kesilen ve somut delile dayanmayan cezanın iptalini arz ederim.',
+                hint: 'Lütfen PLAKA NO, CEZA TUTANAK SERİ NO ve TEBLİĞ TARİHİNİ açıklamaya yazın.'
+            },
+            'hatali_park': { // Hatalı Park aynı kalıyor ama trafik grubu içinde
+                header: 'NÖBETÇİ SULH CEZA HAKİMLİĞİNE',
+                subject: 'Hatalı park cezasına itirazımdır.',
+                legal: 'Cezaya konu aracım yasak park levhasının olmadığı / trafiği engellemeyen bir konumda bulunmasına rağmen haksız işlem tesis edilmiştir.',
+                hint: 'Varsa park ettiğiniz yerin fotoğrafını dilekçe ekine koyacağınızı belirtin.'
             }
         };
 
         function updateTemplate() {
             const type = document.getElementById('typeSelect').value;
             const tpl = templates[type];
+            const hintBox = document.getElementById('hintBox');
             
-            document.getElementById('targetAuthority').innerHTML = tpl.header;
+            // Header Düzenlemesi (Firma adı varsa değiştir)
+            let headerText = tpl.header;
+            const company = document.getElementById('companyName').value;
+            if (company && headerText.includes('[FİRMA ADI]')) {
+                headerText = headerText.replace('[FİRMA ADI]', company.toUpperCase());
+            }
+            if (company && headerText.includes('[EV SAHİBİ ADI]')) {
+                headerText = headerText.replace('[EV SAHİBİ ADI]', company.toUpperCase());
+            }
+
+            document.getElementById('targetAuthority').innerHTML = headerText;
             document.getElementById('prevSubject').innerText = tpl.subject;
             document.getElementById('dynamicLegalText').innerText = tpl.legal;
+
+            // İpucu Kutusu
+            if(tpl.hint) {
+                hintBox.style.display = 'block';
+                hintBox.innerHTML = '<i class="fa-solid fa-lightbulb"></i> <strong>İPUCU:</strong> ' + tpl.hint;
+            } else {
+                hintBox.style.display = 'none';
+            }
+
+            // Trafik, İşçi ve KVKK dilekçelerinde "Tutar" kısmı saçma olabilir, gizleyelim
+            const priceRow = document.getElementById('priceRow');
+            if(type.includes('trafik') || type === 'mobbing' || type === 'kvkk_sikayet' || type === 'okul_sikayet' || type === 'saglik_hata') {
+                priceRow.style.display = 'none';
+            } else {
+                priceRow.style.display = 'block';
+            }
+
             updatePreview();
         }
 
         function updatePreview() {
             // Get Values
-            const company = document.getElementById('companyName').value || 'Firma Adı';
+            const company = document.getElementById('companyName').value || '...';
             const date = document.getElementById('eventDate').value || '[Tarih]';
             const price = document.getElementById('price').value || '0';
             const desc = document.getElementById('description').value || '...';
             const name = document.getElementById('userName').value || 'Adınız Soyadınız';
+            const tc = document.getElementById('tcNo').value || 'T.C. No';
             const address = document.getElementById('userAddress').value || 'Adresiniz';
+
+            // Özel Header Güncellemesi (Input değiştikçe başlık değişsin diye)
+            const type = document.getElementById('typeSelect').value;
+            let headerText = templates[type].header;
+            if (document.getElementById('companyName').value) {
+                 if (headerText.includes('[FİRMA ADI]')) headerText = headerText.replace('[FİRMA ADI]', company.toUpperCase());
+                 if (headerText.includes('[EV SAHİBİ ADI]')) headerText = headerText.replace('[EV SAHİBİ ADI]', company.toUpperCase());
+                 document.getElementById('targetAuthority').innerHTML = headerText;
+            }
 
             // Set Values
             document.getElementById('prevCompany').innerText = company;
             document.getElementById('prevDate').innerText = date;
             document.getElementById('prevPrice').innerText = price;
-            document.getElementById('prevPriceText').innerText = price + " TL";
             document.getElementById('prevDesc').innerText = desc;
             document.getElementById('prevName').innerText = name;
             document.getElementById('signName').innerText = name;
+            document.getElementById('prevTC').innerText = tc;
             document.getElementById('prevAddress').innerText = address;
 
             // Remove placeholders highlights if typed
@@ -254,6 +422,7 @@
                 document.getElementById('prevName').classList.remove('highlight-placeholder');
                 document.getElementById('signName').classList.remove('highlight-placeholder');
             } 
+            if(document.getElementById('tcNo').value) document.getElementById('prevTC').classList.remove('highlight-placeholder');
         }
 
         function copyToClipboard() {
