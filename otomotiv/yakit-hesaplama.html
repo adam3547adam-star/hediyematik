@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yakıt Hesaplama Robotu 2025 (Kesin Sonuç) | Xenon Country</title>
+    
+    <!-- SEO AYARLARI -->
+    <meta name="description" content="Arabanız kilometrede ne kadar yakıyor? İstanbul-İzmir, Ankara-Antalya kaç TL yazar? Benzin, Dizel, LPG ve Elektrikli araç yakıt tüketimi hesaplama robotu. Şehir içi ve şehir dışı detaylı hesaplama.">
+    <meta name="keywords" content="yakıt hesaplama, benzin hesaplama, dizel ne kadar yakar, lpg hesaplama, yolculuk maliyeti, km yakıt hesaplama, yakıtmatik, benzin litre fiyatı, şehir içi yakıt tüketimi">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛽</text></svg>">
+
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N5SDYX95K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5N5SDYX95K');
+    </script>
+    
+    <!-- GOOGLE ADSENSE -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8335171074656428" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root { --bg: #f1f5f9; --text: #0f172a; --primary: #0284c7; --card-bg: #ffffff; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        
+        header { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 15px 0; }
+        .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 20px; font-weight: 900; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+
+        /* ANA KART */
+        .calculator-card { background: var(--card-bg); padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .card-header { text-align: center; margin-bottom: 30px; }
+        .card-header h1 { margin: 10px 0; font-size: 28px; font-weight: 900; color: #0f172a; }
+        .icon-box { width: 60px; height: 60px; background: #e0f2fe; color: #0284c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto; }
+
+        /* FORM GRIDS */
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 13px; font-weight: 700; color: #64748b; margin-bottom: 8px; }
+        .input-wrapper { position: relative; }
+        .input-wrapper input { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; font-weight: 600; box-sizing: border-box; transition: 0.2s; }
+        .input-wrapper input:focus { border-color: var(--primary); outline: none; background: #f0f9ff; }
+        .unit-badge { position: absolute; right: 14px; top: 14px; font-size: 14px; color: #94a3b8; font-weight: 600; }
+
+        /* ARAÇ TİPİ SEÇİMİ */
+        .fuel-selector { display: flex; gap: 10px; margin-bottom: 20px; background: #f8fafc; padding: 5px; border-radius: 12px; }
+        .fuel-option { flex: 1; text-align: center; padding: 10px; cursor: pointer; border-radius: 8px; font-size: 14px; font-weight: 600; color: #64748b; transition: 0.2s; border: 1px solid transparent; }
+        .fuel-option:hover { background: #fff; color: var(--text); }
+        .fuel-option.active { background: #fff; color: var(--primary); border-color: #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+        /* HESAPLA BUTONU */
+        .calc-btn { width: 100%; background: #0f172a; color: white; border: none; padding: 18px; border-radius: 14px; font-size: 18px; font-weight: 800; cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .calc-btn:hover { background: #000; transform: translateY(-2px); }
+
+        /* SONUÇ ALANI */
+        .result-panel { display: none; margin-top: 30px; animation: slideUp 0.5s ease; }
+        .main-result { background: #0284c7; color: white; padding: 30px; border-radius: 16px; text-align: center; position: relative; overflow: hidden; }
+        .main-result::after { content: ''; position: absolute; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; top: -50px; right: -50px; }
+        
+        .result-value { font-size: 48px; font-weight: 900; line-height: 1; margin: 10px 0; }
+        .result-label { font-size: 14px; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+
+        .details-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px; }
+        .detail-card { background: #f0f9ff; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #bae6fd; }
+        .detail-val { display: block; font-size: 18px; font-weight: 800; color: #0369a1; }
+        .detail-sub { font-size: 12px; color: #64748b; }
+
+        /* SHARE BUTTON */
+        .share-whatsapp { background: #25D366; color: white; width: 100%; border: none; padding: 15px; border-radius: 12px; font-weight: 700; font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 15px; text-decoration: none; transition: 0.2s; }
+        .share-whatsapp:hover { background: #128C7E; }
+
+        /* TÜKETİM SİHİRBAZI */
+        .wizard-toggle { font-size: 12px; color: var(--primary); cursor: pointer; text-decoration: underline; margin-top: 5px; display: inline-block; font-weight: 600; }
+        .wizard-box { background: #f0f9ff; border: 1px dashed #bae6fd; padding: 15px; border-radius: 10px; margin-top: 10px; display: none; }
+        
+        .wizard-section-title { font-size: 12px; font-weight: 700; color: #0369a1; margin-bottom: 8px; display: block; }
+        .wizard-grid { display: flex; gap: 8px; margin-bottom: 12px; }
+        
+        .wizard-btn { flex: 1; padding: 8px 5px; font-size: 12px; border: 1px solid #bae6fd; background: #fff; border-radius: 6px; cursor: pointer; color: #475569; text-align: center; transition: 0.2s; font-weight: 500; }
+        .wizard-btn:hover { background: #e0f2fe; }
+        .wizard-btn.active { background: #0284c7; color: white; border-color: #0284c7; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.2); }
+        
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        footer { text-align: center; margin-top: 60px; font-size: 13px; color: #94a3b8; padding-bottom: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo"><i class="fa-solid fa-atom"></i> Xenon Country</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="calculator-card">
+            <div class="card-header">
+                <div class="icon-box"><i class="fa-solid fa-gas-pump"></i></div>
+                <h1>Yakıtmatik Hesaplayıcı</h1>
+                <p style="color:#64748b; font-size:14px; margin-top:5px;">Git-Gel ne yakar? Kişi başı kaç TL düşer?</p>
+            </div>
+
+            <!-- ARAÇ TİPİ -->
+            <div class="fuel-selector">
+                <div class="fuel-option active" onclick="setFuel('benzin', 42.10)">Benzin</div>
+                <div class="fuel-option" onclick="setFuel('dizel', 43.50)">Dizel</div>
+                <div class="fuel-option" onclick="setFuel('lpg', 24.80)">LPG</div>
+                <div class="fuel-option" onclick="setFuel('elektrik', 8.50)">Elektrik</div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Mesafe (KM)</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="distance" placeholder="Örn: 500">
+                        <span class="unit-badge">KM</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Ortalama Tüketim <span class="wizard-toggle" onclick="toggleWizard()">Bilmiyorum, Sihirbazı Aç</span></label>
+                    <div class="input-wrapper">
+                        <input type="number" id="consumption" placeholder="Örn: 7.5">
+                        <span class="unit-badge" id="consUnit">Lt/100km</span>
+                    </div>
+
+                    <!-- GELİŞMİŞ SİHİRBAZ KUTUSU -->
+                    <div id="wizardBox" class="wizard-box">
+                        <!-- 1. Satır: Araç Boyutu -->
+                        <span class="wizard-section-title">1. Araç Kasa Tipi:</span>
+                        <div class="wizard-grid">
+                            <div class="wizard-btn active" id="size-small" onclick="selectWizard('size', 'small')"><i class="fa-solid fa-car-side"></i> Küçük</div>
+                            <div class="wizard-btn" id="size-sedan" onclick="selectWizard('size', 'sedan')"><i class="fa-solid fa-car"></i> Sedan</div>
+                            <div class="wizard-btn" id="size-suv" onclick="selectWizard('size', 'suv')"><i class="fa-solid fa-truck-pickup"></i> SUV/Cip</div>
+                        </div>
+
+                        <!-- 2. Satır: Yol Durumu -->
+                        <span class="wizard-section-title">2. Yol Durumu:</span>
+                        <div class="wizard-grid">
+                            <div class="wizard-btn" id="road-city" onclick="selectWizard('road', 'city')"><i class="fa-solid fa-city"></i> Şehir İçi</div>
+                            <div class="wizard-btn active" id="road-mixed" onclick="selectWizard('road', 'mixed')"><i class="fa-solid fa-route"></i> Karışık</div>
+                            <div class="wizard-btn" id="road-highway" onclick="selectWizard('road', 'highway')"><i class="fa-solid fa-road"></i> Şehir Dışı</div>
+                        </div>
+                        
+                        <div style="font-size:11px; color:#64748b; margin-top:5px; text-align:center;">
+                            *Tahmini tüketim değeri otomatik uygulanmıştır.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Litre/Birim Fiyatı</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="price" value="42.10">
+                        <span class="unit-badge">TL</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Yolcu Sayısı</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="passengers" value="1">
+                        <span class="unit-badge"><i class="fa-solid fa-user"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROTA BİLGİSİ (OPSİYONEL - PAYLAŞIM İÇİN) -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nereden (Opsiyonel)</label>
+                    <div class="input-wrapper"><input type="text" id="fromLoc" placeholder="İzmir"></div>
+                </div>
+                <div class="form-group">
+                    <label>Nereye (Opsiyonel)</label>
+                    <div class="input-wrapper"><input type="text" id="toLoc" placeholder="İstanbul"></div>
+                </div>
+            </div>
+
+            <button class="calc-btn" onclick="calculateFuel()">
+                HESAPLA <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <!-- SONUÇLAR -->
+            <div id="resultPanel" class="result-panel">
+                <div class="main-result">
+                    <div class="result-label">TEK YÖN TOPLAM MALİYET</div>
+                    <div class="result-value" id="totalCost">₺0</div>
+                    <div style="font-size:14px; opacity:0.9;">Gidiş-Dönüş: <span id="roundTripCost" style="font-weight:800;">₺0</span></div>
+                </div>
+
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <span class="detail-val" id="fuelAmount">0 Lt</span>
+                        <span class="detail-sub">Tüketilen Yakıt</span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-val" id="kmCost">₺0</span>
+                        <span class="detail-sub">KM Başına</span>
+                    </div>
+                    <div class="detail-card" style="background:#dcfce7; border-color:#86efac;">
+                        <span class="detail-val" id="perPerson" style="color:#166534;">₺0</span>
+                        <span class="detail-sub">Kişi Başı</span>
+                    </div>
+                </div>
+
+                <button class="share-whatsapp" onclick="shareResult()">
+                    <i class="fa-brands fa-whatsapp"></i> Maliyeti Arkadaşlarına At
+                </button>
+                
+                <p style="text-align:center; font-size:12px; color:#94a3b8; margin-top:15px;">
+                    *Fiyatlar ortalamadır, istasyonlarda farklılık gösterebilir.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- REKLAM ALANI -->
+        <div style="margin-top:30px; text-align:center; padding:20px; background:#fff; border-radius:12px; border:1px dashed #cbd5e1;">
+            <p style="font-size:12px; color:#cbd5e1; margin-bottom:5px;">Sponsorlu</p>
+            <!-- Google AdSense Kodu -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8335171074656428"
+                 data-ad-slot="1234567890" 
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Xenon Country.</p>
+    </footer>
+
+    <script>
+        let currentFuelType = 'benzin';
+        let currentSize = 'small';
+        let currentRoad = 'mixed';
+        
+        // Gelişmiş Tüketim Ortalamaları (Lt/100km veya kWh/100km)
+        // Format: 'yakıt': { 'boyut': { city: X, mixed: Y, highway: Z } }
+        const estimates = {
+            'benzin': {
+                'small': { city: 7.5, mixed: 6.0, highway: 5.0 },
+                'sedan': { city: 9.5, mixed: 7.5, highway: 6.0 },
+                'suv':   { city: 11.0, mixed: 9.5, highway: 7.5 }
+            },
+            'dizel': {
+                'small': { city: 5.5, mixed: 4.5, highway: 3.8 },
+                'sedan': { city: 6.8, mixed: 5.8, highway: 4.5 },
+                'suv':   { city: 8.5, mixed: 7.5, highway: 6.0 }
+            },
+            'lpg': {
+                'small': { city: 9.0, mixed: 7.5, highway: 6.5 },
+                'sedan': { city: 11.5, mixed: 9.5, highway: 7.5 },
+                'suv':   { city: 13.5, mixed: 11.5, highway: 9.0 }
+            },
+            'elektrik': {
+                // Elektrikli araçlarda otoban tüketimi (yüksek hız) şehir içinden (rejeneratif fren) daha fazladır.
+                'small': { city: 12.0, mixed: 14.0, highway: 16.0 },
+                'sedan': { city: 15.0, mixed: 17.5, highway: 20.0 },
+                'suv':   { city: 18.0, mixed: 21.0, highway: 24.0 }
+            }
+        };
+
+        function setFuel(type, defaultPrice) {
+            currentFuelType = type;
+            
+            // Butonları güncelle
+            document.querySelectorAll('.fuel-option').forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Fiyatı güncelle
+            document.getElementById('price').value = defaultPrice.toFixed(2);
+
+            // Birim güncelle (Elektrik için kWh)
+            const unitText = type === 'elektrik' ? 'kWh/100km' : 'Lt/100km';
+            document.getElementById('consUnit').innerText = unitText;
+            
+            // Eğer sihirbazda bir seçim varsa yeni yakıt tipine göre güncelle
+            updateEstimateInput();
+        }
+
+        function toggleWizard() {
+            const box = document.getElementById('wizardBox');
+            const link = document.querySelector('.wizard-toggle');
+            
+            if (box.style.display === 'block') {
+                box.style.display = 'none';
+                link.innerText = 'Bilmiyorum, Sihirbazı Aç';
+            } else {
+                box.style.display = 'block';
+                link.innerText = 'Sihirbazı Gizle';
+                updateEstimateInput(); // Açılır açılmaz mevcut seçimi uygula
+            }
+        }
+
+        function selectWizard(category, value) {
+            // State güncelle
+            if (category === 'size') currentSize = value;
+            if (category === 'road') currentRoad = value;
+
+            // Görsel güncelle (Active Class)
+            document.querySelectorAll(`[id^="${category}-"]`).forEach(el => el.classList.remove('active'));
+            document.getElementById(`${category}-${value}`).classList.add('active');
+
+            // Değeri uygula
+            updateEstimateInput();
+        }
+
+        function updateEstimateInput() {
+            const val = estimates[currentFuelType][currentSize][currentRoad];
+            const input = document.getElementById('consumption');
+            input.value = val;
+            
+            // Hafif yanıp sönme efekti
+            input.style.backgroundColor = '#dcfce7';
+            setTimeout(() => input.style.backgroundColor = '', 300);
+        }
+
+        function calculateFuel() {
+            const dist = parseFloat(document.getElementById('distance').value) || 0;
+            const cons = parseFloat(document.getElementById('consumption').value) || 0;
+            const price = parseFloat(document.getElementById('price').value) || 0;
+            const passengers = parseInt(document.getElementById('passengers').value) || 1;
+
+            if (dist === 0 || cons === 0) {
+                alert("Lütfen mesafe ve tüketim değerlerini girin.");
+                return;
+            }
+
+            // Hesaplamalar
+            const totalFuel = (dist * cons) / 100;
+            const totalCost = totalFuel * price;
+            const kmCost = totalCost / dist;
+            const perPerson = totalCost / passengers;
+            const roundTrip = totalCost * 2;
+
+            // Yazdırma
+            document.getElementById('totalCost').innerText = formatMoney(totalCost);
+            document.getElementById('roundTripCost').innerText = formatMoney(roundTrip);
+            document.getElementById('fuelAmount').innerText = totalFuel.toFixed(1) + (currentFuelType === 'elektrik' ? ' kWh' : ' Lt');
+            document.getElementById('kmCost').innerText = formatMoney(kmCost);
+            document.getElementById('perPerson').innerText = formatMoney(perPerson);
+
+            document.getElementById('resultPanel').style.display = 'block';
+        }
+
+        function formatMoney(num) {
+            return "₺" + num.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function shareResult() {
+            const from = document.getElementById('fromLoc').value;
+            const to = document.getElementById('toLoc').value;
+            const cost = document.getElementById('totalCost').innerText;
+            const personCost = document.getElementById('perPerson').innerText;
+            
+            let msg = `🚗 Yakıtmatik Hesaplaması:\n`;
+            if(from && to) msg += `📍 Rota: ${from} ➔ ${to}\n`;
+            msg += `💸 Toplam Yakıt: ${cost}\n`;
+            msg += `👤 Kişi Başı: ${personCost}\n\n`;
+            msg += `Sen de hesapla: https://xenoncountry.com/otomotiv/yakit-hesaplama.html`;
+
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
