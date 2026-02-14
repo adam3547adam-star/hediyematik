@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xenon Country | Hayatınızı Kolaylaştıran Dijital İsviçre Çakısı</title>
     
-    <!-- SEO & GOOGLE ARAMA SONUÇLARI -->
-    <title>Xenon Country | Profesyonel Teknoloji Çözümleri & Pratik Bilgiler</title>
-    <meta name="description" content="Teknik sorunlar, finansal hesaplamalar ve modern yaşamın merak edilen soruları için net çözümler. Cevapsız soruların nihai arşivi.">
-    <meta name="author" content="Xenon Country">
-    <link rel="canonical" href="https://xenoncountry.com/" />
-
-    <!-- OPEN GRAPH (Sosyal Medya & İndeksleme) -->
-    <meta property="og:title" content="Xenon Country | Teknoloji & Yaşam Çözümleri">
-    <meta property="og:description" content="Modern ikilemler için akıllı çözümler arşivi. Teknoloji, para ve yaşam rehberleri.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xenoncountry.com/">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:locale" content="tr_TR">
+    <!-- SEO -->
+    <meta name="description" content="Dilekçe oluşturucu, net kar hesaplama, yakıt tüketimi ve geçmiş yatırım sorgulama araçları. Günlük sorunlarınıza anında, reklamsız ve pratik çözümler.">
+    <meta name="keywords" content="dilekçe örneği, net kar hesaplama, yakıt hesaplama, hediye sihirbazı, kombi basıncı, banka promosyonu, yatırım hesaplama, online araçlar">
 
     <!-- FAVICON -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
 
-    <!-- GOOGLE ANALYTICS (G-5N5SDYX95K) -->
+    <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N5SDYX95K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -37,257 +28,186 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* EVRENSEL SIFIRLAMA (TAŞMAYI ÖNLER) */
+        :root { 
+            --bg: #f8fafc; 
+            --text: #0f172a; 
+            --accent: #2563eb; 
+            --border: #e2e8f0; 
+            --card-bg: #ffffff;
+        }
+        
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+        header { background: #fff; border-bottom: 1px solid var(--border); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 22px; font-weight: 900; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, #0f172a, #334155); color: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
         
-        :root { --bg-color:#f8fafc; --text-main:#0f172a; --text-light:#64748b; --accent:#ff6000; --border:#e2e8f0; }
-        
-        html { width: 100%; overflow-x: hidden; }
-        body { font-family:'Inter',sans-serif; background:var(--bg-color); color:var(--text-main); line-height:1.6; width: 100%; overflow-x: hidden; }
-        
-        header { background:#fff; border-bottom:1px solid var(--border); padding:15px 0; position:sticky; top:0; z-index:100; width: 100%; }
-        
-        .nav-container { 
-            max-width:1100px; 
-            width: 100%;
-            margin:0 auto; 
-            display:flex; 
-            justify-content:space-between; 
-            align-items:center; 
-            padding:0 20px; 
-        }
+        /* Hero Section */
+        .hero { background: #0f172a; color: #fff; padding: 80px 20px; text-align: center; margin-bottom: 40px; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.2) 0%, rgba(15, 23, 42, 0) 70%); }
+        .hero h1 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 15px; position: relative; }
+        .hero p { font-size: 18px; color: #94a3b8; max-width: 700px; margin: 0 auto; position: relative; }
 
-        .logo { font-size:22px; font-weight:900; color:var(--text-main); text-decoration:none; display:flex; align-items:center; gap:12px; }
-        .logo-icon { width:40px; height:40px; background:linear-gradient(135deg,#0f172a,#334155); color:#fff; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink: 0; }
-        
-        .nav-links { display:flex; gap:20px; font-weight:600; font-size:14px; align-items:center; }
-        .nav-links a { text-decoration:none; color:var(--text-light); transition:0.2s; white-space: nowrap; }
-        .nav-links a:hover { color:var(--accent); }
-        .lang-btn { display:flex; align-items:center; gap:6px; background:#f1f5f9; padding:8px 14px; border-radius:20px; color:var(--text-main) !important; font-size:13px; border:1px solid var(--border); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; display: grid; grid-template-columns: 2.5fr 1fr; gap: 40px; }
+        @media (max-width: 950px) { .container { grid-template-columns: 1fr; } }
 
-        /* --- MOBİL UYUMLULUK DÜZELTMESİ --- */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column; /* Alt alta sırala */
-                gap: 15px;
-                padding: 0 15px;
-            }
-            .logo {
-                width: 100%;
-                justify-content: center; /* Logoyu ortala */
-            }
-            .nav-links {
-                width: 100%;
-                justify-content: center; /* Linkleri ortala */
-                gap: 15px;
-                font-size: 13px;
-                flex-wrap: wrap;
-            }
-            .nav-links a:not(.lang-btn) {
-                display: block; 
-            }
-        }
-        /* --------------------------------- */
+        .section-title { font-size: 24px; font-weight: 800; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; color: #1e293b; }
+        .section-title i { color: var(--accent); }
 
-        .container { max-width:1100px; width: 100%; margin:40px auto; display:grid; grid-template-columns:2fr 1fr; gap:40px; padding:0 20px; }
-        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+        /* Tools Grid */
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px; }
+        .tool-card { background: var(--card-bg); border: 1px solid var(--border); padding: 25px; border-radius: 20px; text-decoration: none; color: inherit; transition: 0.3s; position: relative; overflow: hidden; }
+        .tool-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 15px 30px rgba(37, 99, 235, 0.1); }
+        .tool-card .icon { width: 50px; height: 50px; background: #eff6ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 15px; color: var(--accent); transition: 0.3s; }
+        .tool-card:hover .icon { background: var(--accent); color: #fff; }
+        .tool-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+        .tool-card p { font-size: 14px; color: #64748b; line-height: 1.5; }
 
-        .hero-section { margin-bottom: 40px; width: 100%; }
-        .hero-img { 
-            width:100%; height:220px; 
-            background-image: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1200&q=80'); 
-            background-size:cover; background-position:center; border-radius:20px; 
-            display:flex; flex-direction:column; align-items:center; justify-content:center; 
-            text-align:center; color:#fff; padding:20px;
-        }
-        .hero-title { font-size:32px; font-weight:900; margin:0 0 10px 0; letter-spacing: -1px; }
-        .hero-desc { font-size:16px; color:#cbd5e1; max-width:600px; margin: 0; }
+        /* Blog List */
+        .blog-list { display: grid; gap: 20px; }
+        .blog-item { display: flex; gap: 20px; background: #fff; padding: 15px; border-radius: 20px; border: 1px solid var(--border); text-decoration: none; color: inherit; transition: 0.2s; align-items: center; }
+        .blog-item:hover { transform: translateX(5px); border-color: #cbd5e1; }
+        .blog-thumb { width: 100px; height: 100px; border-radius: 14px; object-fit: cover; flex-shrink: 0; }
+        .blog-info h4 { font-size: 17px; font-weight: 800; margin-bottom: 6px; color: #0f172a; }
+        .blog-info p { font-size: 13px; color: #64748b; line-height: 1.5; }
 
-        .section-header { font-size: 22px; font-weight: 800; margin-bottom: 20px; border-left: 4px solid var(--accent); padding-left: 15px; }
-        .article-card { display: flex; gap: 20px; margin-bottom: 30px; align-items: flex-start; }
-        .article-thumb { width: 120px; height: 90px; background: #cbd5e1; border-radius: 12px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff; }
-        .article-content h3 { margin: 0 0 8px; font-size: 18px; font-weight: 700; }
-        .article-content h3 a { text-decoration: none; color: var(--text-main); transition: 0.2s; }
-        .article-content h3 a:hover { color: var(--accent); }
-        .article-meta { font-size: 13px; color: var(--text-light); display: flex; gap: 10px; }
+        /* Sidebar */
+        .sidebar-widget { background: #fff; border: 1px solid var(--border); padding: 25px; border-radius: 24px; margin-bottom: 30px; }
+        .widget-title { font-size: 16px; font-weight: 800; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
 
-        .sidebar-widget { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 25px; margin-bottom: 30px; width: 100%; }
-        .widget-title { font-size: 16px; font-weight: 800; margin-top: 0; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
-        .tool-link { display: flex; align-items: center; gap: 15px; text-decoration: none; color: var(--text-main); padding: 15px; border-radius: 12px; background: #f8fafc; border: 1px solid transparent; transition: 0.2s; margin-bottom: 10px; }
-        .tool-link:hover { border-color: var(--accent); background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transform: translateY(-2px); }
-        .tool-icon { width: 40px; height: 40px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--accent); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .tool-info h4 { margin: 0; font-size: 15px; font-weight: 700; }
-        .tool-info p { margin: 2px 0 0; font-size: 12px; color: var(--text-light); }
-
-        footer { background: #fff; border-top: 1px solid var(--border); padding: 40px 0; text-align: center; font-size: 14px; color: var(--text-light); margin-top: 60px; width: 100%; }
+        footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; color: #64748b; font-size: 14px; background: #fff; }
+        .badge { background: #dcfce7; color: #166534; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; margin-left: 5px; }
+        .badge-new { background: #fee2e2; color: #b91c1c; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="nav-container">
-            <!-- LOGO -->
             <a href="/" class="logo">
-                <div class="logo-icon"><i class="fa-solid fa-atom fa-spin-pulse" style="--fa-animation-duration: 3s;"></i></div>
+                <div class="logo-icon"><i class="fa-solid fa-atom"></i></div>
                 Xenon Country
             </a>
-            <div class="nav-links">
-                <a href="#">Teknoloji</a>
-                <a href="#">Para</a>
-                <a href="#">Yaşam</a>
-                <a href="/en/" class="lang-btn">
-                    🇺🇸 EN
-                </a>
+            <div style="font-size: 13px; font-weight: 600; color: #64748b; display:none; @media(min-width:600px){display:block;}">
+                Dijital İsviçre Çakınız
             </div>
         </div>
     </header>
 
+    <section class="hero">
+        <h1>Karmaşaya Son, Çözüme Hoş Geldiniz.</h1>
+        <p>İnternette saatlerce aradığınız ama reklamlar arasında bulamadığınız o net cevaplar, hesaplama araçları ve dilekçeler burada.</p>
+    </section>
+
     <div class="container">
         
-        <!-- SOL TARAF (İÇERİK) -->
         <main>
-            <div class="hero-section">
-                <div class="hero-img">
-                    <h1 class="hero-title">Sıkça Sorulan Sorular</h1>
-                    <p class="hero-desc">Google'ın bile bazen kafasının karıştığı, forumların çöplüğe döndüğü konular için net, sade ve kesin çözümler.</p>
-                </div>
+            <!-- ARAÇLAR BÖLÜMÜ -->
+            <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Popüler Araçlar</h2>
+            <div class="tools-grid">
+                
+                <!-- Dilekçe Sihirbazı -->
+                <a href="rehber/hak-arama-rehberi.html" class="tool-card">
+                    <div class="icon"><i class="fa-solid fa-file-pen"></i></div>
+                    <h3>Dilekçe Sihirbazı <span class="badge badge-new">YENİ</span></h3>
+                    <p>Tüketici Hakem Heyeti, Trafik Cezası veya İstifa dilekçenizi saniyeler içinde, resmi formatta oluşturun.</p>
+                </a>
+
+                <!-- Net Kar Sihirbazı -->
+                <a href="eticaret/net-kar-sihirbazi.html" class="tool-card">
+                    <div class="icon"><i class="fa-solid fa-calculator"></i></div>
+                    <h3>Net Kar Hesapla</h3>
+                    <p>Trendyol, Hepsiburada komisyonları, KDV ve kargo düşünce cebine gerçekten ne kalıyor?</p>
+                </a>
+
+                <!-- Yakıtmatik -->
+                <a href="otomotiv/yakit-hesaplama.html" class="tool-card">
+                    <div class="icon"><i class="fa-solid fa-gas-pump"></i></div>
+                    <h3>Yakıtmatik</h3>
+                    <p>Şehir içi/dışı farkıyla km maliyetini ve kişi başı yolculuk tutarını anında hesapla.</p>
+                </a>
+
+                <!-- Zaman Makinesi -->
+                <a href="yatirim/index.html" class="tool-card">
+                    <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Geçmiş Yatırım</h3>
+                    <p>"Keşke o zaman dolar/altın alsaydım" dediğin paranın bugünkü değerini gör ve üzül.</p>
+                </a>
+
+                <!-- Hediye Sihirbazı -->
+                <a href="hediye/index.html" class="tool-card">
+                    <div class="icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3>Hediye Sihirbazı <span class="badge">AI</span></h3>
+                    <p>Kime, neye göre, ne alacağını yapay zeka senin için bulsun.</p>
+                </a>
+
             </div>
 
-            <h2 class="section-header">Trend Dosyalar</h2>
-
-            <!-- 1. ATM PARA YUTTU -->
-            <div class="article-card">
-                <div class="article-thumb" style="background: #dc2626;"><i class="fa-solid fa-building-columns"></i></div>
-                <div class="article-content">
-                    <h3><a href="finans/atm-para-yuttu.html">ATM Para Yuttu veya Eksik Verdi Ne Yapmalıyım?</a></h3>
-                    <p style="font-size:14px; color:#64748b; margin:5px 0;">Elektrik kesildi veya cihaz dondu, paranız içeride mi kaldı? Banka kasası sayım süreci ve paranızı geri alma rehberi.</p>
-                    <div class="article-meta">
-                        <span><i class="fa-regular fa-clock"></i> 4 dk okuma</span>
-                        <span>• Finans</span>
+            <!-- REHBERLER BÖLÜMÜ -->
+            <h2 class="section-title"><i class="fa-solid fa-book-open"></i> "Nasıl Çözülür?" Rehberleri</h2>
+            <div class="blog-list">
+                
+                <!-- Kombi Rehberi -->
+                <a href="evyasam/kombi-basinci.html" class="blog-item">
+                    <img src="https://images.unsplash.com/photo-1585129777179-734fb4419b6e?auto=format&fit=crop&w=300&q=80" alt="Kombi" class="blog-thumb">
+                    <div class="blog-info">
+                        <h4>Kombi Basıncı Neden Düşüyor? (Hızlı Teşhis)</h4>
+                        <p>Usta çağırmadan önce genleşme tankını ve sızıntıları kontrol etme rehberi.</p>
                     </div>
-                </div>
-            </div>
+                </a>
 
-            <!-- 2. KARTTAN PARA ÇEKİLDİ -->
-            <div class="article-card">
-                <div class="article-thumb" style="background: #0f172a;"><i class="fa-regular fa-credit-card"></i></div>
-                <div class="article-content">
-                    <h3><a href="finans/karttan-para-cekildi.html">Karttan Para Çekildi Ama Sipariş Oluşmadı (Provizyon)</a></h3>
-                    <p style="font-size:14px; color:#64748b; margin:5px 0;">Online alışverişte "Hata" aldınız ama para hesabınızdan düştü mü? Panik yapmayın, askıda provizyon çözümü.</p>
-                    <div class="article-meta">
-                        <span><i class="fa-regular fa-clock"></i> 3 dk okuma</span>
-                        <span>• Finans</span>
+                <!-- Kart Sorunu -->
+                <a href="#" class="blog-item" style="opacity:0.7; pointer-events:none;">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=300&q=80" alt="Kart Sorunu" class="blog-thumb">
+                    <div class="blog-info">
+                        <h4>Karttan Para Çekildi Ama Sipariş Oluşmadı? (Yakında)</h4>
+                        <p>Askıda kalan provizyon ödemelerinin iade süreci ve bankayla iletişim yolları.</p>
                     </div>
-                </div>
-            </div>
+                </a>
 
-            <!-- 3. INSTAGRAM -->
-            <div class="article-card">
-                <div class="article-thumb" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);"><i class="fa-brands fa-instagram"></i></div>
-                <div class="article-content">
-                    <h3><a href="teknoloji/instagram-cozumu.html">Instagram Hikayeler Bulanık Yükleniyor Sorunu (2025 Çözüm)</a></h3>
-                    <p style="font-size:14px; color:#64748b; margin:5px 0;">Android telefonlarda kalite düşmesinin asıl sebebi ne? "Yüksek Kalite Yükleme" ayarı.</p>
-                    <div class="article-meta">
-                        <span><i class="fa-regular fa-clock"></i> 4 dk okuma</span>
-                        <span>• Sosyal Medya</span>
+                <!-- ATM Sorunu -->
+                <a href="#" class="blog-item" style="opacity:0.7; pointer-events:none;">
+                    <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cd4?auto=format&fit=crop&w=300&q=80" alt="ATM Sorunu" class="blog-thumb">
+                    <div class="blog-info">
+                        <h4>ATM Paranızı Yuttuysa Panik Yapmayın! (Yakında)</h4>
+                        <p>Kasa mutabakatı süreci ve paranızı bankadan geri almanız için 3 kritik adım.</p>
                     </div>
-                </div>
-            </div>
+                </a>
 
-            <!-- 4. BANKA PROMOSYON -->
-            <div class="article-card">
-                <div class="article-thumb" style="background: #16a34a;"><i class="fa-solid fa-money-bill-transfer"></i></div>
-                <div class="article-content">
-                    <h3><a href="finans/banka-promosyonu-cayma-bedeli.html">Banka Promosyonu Cayma Bedeli Nasıl Hesaplanır?</a></h3>
-                    <p style="font-size:14px; color:#64748b; margin:5px 0;">Maaşınızı başka bankaya taşımak istiyorsunuz ama ceza ödemekten korkuyorsunuz. İade formülü.</p>
-                    <div class="article-meta">
-                        <span><i class="fa-regular fa-clock"></i> 6 dk okuma</span>
-                        <span>• Finans</span>
-                    </div>
-                </div>
             </div>
-
-            <!-- 5. STEAM -->
-            <div class="article-card">
-                <div class="article-thumb" style="background: #171a21;"><i class="fa-brands fa-steam"></i></div>
-                <div class="article-content">
-                    <h3><a href="steamhizsorunu/steam-hiz-sorunu.html">İnternet Hızlı Ama Steam İndirmesi Yavaş (Kesin Çözüm)</a></h3>
-                    <p style="font-size:14px; color:#64748b; margin:5px 0;">Speedtest 100 Mbps gösteriyor ama Steam yavaş indiriyor. Sorun "İndirme Bölgesi" ayarında.</p>
-                    <div class="article-meta">
-                        <span><i class="fa-regular fa-clock"></i> 3 dk okuma</span>
-                        <span>• Teknoloji</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 6. KOMBİ -->
-            <div class="article-card">
-                <div class="article-thumb" style="background: #f97316;"><i class="fa-solid fa-fire-burner"></i></div>
-                <div class="article-content">
-                    <h3><a href="evyasam/kombi-basinci.html">Kombi Basıncı Neden Sürekli Düşüyor? (1.5 Bar Altı)</a></h3>
-                    <p style="font-size:14px; color:#64748b; margin:5px 0;">Her gün su basmak zorunda mısınız? Sorun tesisat kaçağı mı yoksa genleşme tankı mı? Basit teşhis yöntemi.</p>
-                    <div class="article-meta">
-                        <span><i class="fa-regular fa-clock"></i> 5 dk okuma</span>
-                        <span>• Ev & Yaşam</span>
-                    </div>
-                </div>
-            </div>
-
         </main>
 
-        <!-- SAĞ TARAF (ARAÇLAR) -->
         <aside>
             <div class="sidebar-widget">
-                <h3 class="widget-title"><i class="fa-solid fa-toolbox"></i> Popüler Araçlar</h3>
-                
-                <!-- YENİ ARAÇ 1: Net Kar -->
-                <a href="eticaret/net-kar-sihirbazi.html" class="tool-link">
-                    <div class="tool-icon"><i class="fa-solid fa-store"></i></div>
-                    <div class="tool-info">
-                        <h4>Net Kar Sihirbazı</h4>
-                        <p>E-ticaret kar/zarar hesaplayıcı.</p>
-                    </div>
-                </a>
-
-                <!-- YENİ ARAÇ 2: Dilekçe -->
-                <a href="rehber/hak-arama-rehberi.html" class="tool-link">
-                    <div class="tool-icon"><i class="fa-solid fa-pen-fancy"></i></div>
-                    <div class="tool-info">
-                        <h4>Dilekçe Oluşturucu</h4>
-                        <p>Otomatik itiraz dilekçesi yaz.</p>
-                    </div>
-                </a>
-
-                <!-- MEVCUT ARAÇ: Hediye -->
-                <a href="hediye/" class="tool-link">
-                    <div class="tool-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <div class="tool-info">
-                        <h4>Hediye Sihirbazı</h4>
-                        <p>Yapay zeka ile nokta atışı hediye bul.</p>
-                    </div>
-                </a>
-
-                <!-- MEVCUT ARAÇ: Yatırım -->
-                <a href="yatirim/" class="tool-link">
-                    <div class="tool-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <div class="tool-info">
-                        <h4>Geçmiş Yatırım</h4>
-                        <p>Keşke alsaydım dediğin her şeyi hesapla.</p>
-                    </div>
-                </a>
-
+                <h3 class="widget-title"><i class="fa-solid fa-fire"></i> Haftanın Yıldızı</h3>
+                <p style="font-size: 14px; color: #475569; margin-bottom: 15px;">
+                    Bu hafta en çok <b>Dilekçe Sihirbazı</b> kullanıldı. Hakem Heyeti başvurunu hemen hazırla.
+                </p>
+                <a href="rehber/hak-arama-rehberi.html" style="display: block; text-align: center; background: var(--accent); color: #fff; text-decoration: none; padding: 12px; border-radius: 12px; font-weight: 700;">Dilekçe Oluştur</a>
             </div>
 
-            <div class="sidebar-widget" style="text-align:center; min-height:250px; display:flex; align-items:center; justify-content:center; background:#f1f5f9; border:2px dashed #cbd5e1;">
-                <span style="color:#94a3b8; font-weight:600;">Reklam Alanı</span>
+            <!-- REKLAM ALANI -->
+            <div class="sidebar-widget" style="text-align:center; padding:10px; min-height:280px; width:100%; box-sizing:border-box; background: #f1f5f9; border: 2px dashed #cbd5e1;">
+                <p style="font-size:12px; color:#94a3b8; margin-bottom:5px;">Reklam</p>
+                <ins class="adsbygoogle"
+                     style="display:block; width:100%;"
+                     data-ad-client="ca-pub-8335171074656428"
+                     data-ad-slot="1234567890"  
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
         </aside>
 
     </div>
 
     <footer>
-        <p>&copy; 2025 Xenon Country. Tüm hakları saklıdır.</p>
-        <p style="font-size:12px; margin-top:10px;">İzmir, Türkiye'de geliştirildi 🇹🇷</p>
+        <p>&copy; 2025 Xenon Country. Öz ve Gerçekçi Bilgi Arşivi.</p>
+        <p style="font-size: 12px; margin-top: 10px; opacity: 0.7;">İçerikler bilgilendirme amaçlıdır, yatırım veya teknik tavsiye değildir.</p>
     </footer>
 
 </body>
