@@ -10,7 +10,7 @@
   <!-- ANA SAYFA (TR) -->
   <url>
     <loc>https://xenoncountry.com/</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://xenoncountry.com/" />
@@ -21,7 +21,7 @@
   <!-- İNGİLİZCE ANA SAYFA (EN) -->
   <url>
     <loc>https://xenoncountry.com/en/</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://xenoncountry.com/" />
@@ -32,6 +32,49 @@
   <!-- ========================================== -->
   <!-- TÜRKÇE REHBERLER (TR GUIDES) -->
   <!-- ========================================== -->
+
+  <!-- REHBER: WHATSAPP MESAJ BEKLENİYOR (YENİ) -->
+  <url>
+    <loc>https://xenoncountry.com/teknoloji/whatsapp-mesaj-bekleniyor.html</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://xenoncountry.com/teknoloji/whatsapp-mesaj-bekleniyor.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://xenoncountry.com/en/tech/whatsapp-waiting-message.html" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1614680376593-902f74cf0d41</image:loc>
+      <image:title>WhatsApp Bu Mesaj Bekleniyor Çözümü</image:title>
+      <image:caption>WhatsApp mesajlar gelmiyor hatası ve yedekleme ile kesin çözümü.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- REHBER: IPHONE SISTEM VERILERI (YENİ) -->
+  <url>
+    <loc>https://xenoncountry.com/teknoloji/iphone-sistem-verileri.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://xenoncountry.com/teknoloji/iphone-sistem-verileri.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://xenoncountry.com/en/tech/iphone-system-data.html" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5</image:loc>
+      <image:title>iPhone Sistem Verileri Temizleme</image:title>
+      <image:caption>iPhone saklama alanı sistem verileri silme ve diğer klasörü temizleme yöntemleri.</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- REHBER: E-DEVLET RISK RAPORU ŞİFRESİ (YENİ) -->
+  <url>
+    <loc>https://xenoncountry.com/finans/e-devlet-risk-raporu-sifresi.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1550751827-4bd374c3f58b</image:loc>
+      <image:title>e-Devlet Risk Raporu PDF Şifresi</image:title>
+      <image:caption>e-Devlet risk merkezi raporu şifresi nedir, PDF açılmıyor sorunu çözümü.</image:caption>
+    </image:image>
+  </url>
 
   <!-- REHBER: INSTAGRAM ÇÖZÜMÜ -->
   <url>
@@ -104,6 +147,36 @@
   <!-- ========================================== -->
   <!-- İNGİLİZCE İÇERİKLER (EN CONTENT) -->
   <!-- ========================================== -->
+
+  <!-- GUIDE: WHATSAPP WAITING MESSAGE (NEW) -->
+  <url>
+    <loc>https://xenoncountry.com/en/tech/whatsapp-waiting-message.html</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://xenoncountry.com/teknoloji/whatsapp-mesaj-bekleniyor.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://xenoncountry.com/en/tech/whatsapp-waiting-message.html" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1614680376593-902f74cf0d41</image:loc>
+      <image:title>WhatsApp Waiting for This Message Fix</image:title>
+      <image:caption>How to fix WhatsApp waiting for this message error, encryption sync and backup trick.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- GUIDE: IPHONE SYSTEM DATA (NEW) -->
+  <url>
+    <loc>https://xenoncountry.com/en/tech/iphone-system-data.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://xenoncountry.com/teknoloji/iphone-sistem-verileri.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://xenoncountry.com/en/tech/iphone-system-data.html" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5</image:loc>
+      <image:title>Clean iPhone System Data Storage</image:title>
+      <image:caption>How to clear system data and other storage on iPhone 2026 guide.</image:caption>
+    </image:image>
+  </url>
 
   <!-- GUIDE: INSTAGRAM BLUR FIX (EN) -->
   <url>
