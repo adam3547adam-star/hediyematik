@@ -1,290 +1,162 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xenon Country | Hayatınızı Kolaylaştıran Dijital İsviçre Çakısı</title>
-    
-    <!-- SEO OPTİMİZASYONU (Genişletilmiş) -->
-    <meta name="description" content="Dilekçe oluşturucu, tapu harcı hesaplama, araç noter ücreti, mesaj sihirbazı ve internet hız testi. Günlük sorunlarınıza anında, reklamsız ve pratik çözümler.">
-    <!-- Kullanıcıların arayabileceği basit kombinasyonlar eklendi -->
-    <meta name="keywords" content="tapu, noter, dilekçe, mesaj, internet hızı, kota, yakıt, kombi, hediye, yatırım, 2026 masraf, tapu harcı hesaplama, araç satış ücreti, dilekçe örneği, istifa dilekçesi, kira itirazı, netflix ne kadar yer, gta 5 kaç gb, kombi su basma, atm para yuttu, imei kayıt ücreti">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- FAVICON -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
+  <!-- ANA SAYFA (TR & EN BAĞLANTILI) -->
+  <url>
+    <loc>https://xenoncountry.com/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <!-- Google'a dil ayrımını bildiren kodlar: -->
+    <xhtml:link rel="alternate" hreflang="tr" href="https://xenoncountry.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://xenoncountry.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xenoncountry.com/en/" />
+  </url>
 
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N5SDYX95K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5N5SDYX95K');
-    </script>
-    
-    <!-- ADSENSE -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8335171074656428" crossorigin="anonymous"></script>
+  <!-- İNGİLİZCE ANA SAYFA -->
+  <url>
+    <loc>https://xenoncountry.com/en/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <!-- Burada da diğer dille bağlantı kuruyoruz: -->
+    <xhtml:link rel="alternate" hreflang="tr" href="https://xenoncountry.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://xenoncountry.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xenoncountry.com/en/" />
+  </url>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- REHBER: INSTAGRAM ÇÖZÜMÜ -->
+  <url>
+    <loc>https://xenoncountry.com/teknoloji/instagram-cozumu.html</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1611162617474-5b21e879e113</image:loc>
+      <image:title>Instagram Hikaye Kalitesi Arttırma</image:title>
+      <image:caption>Android telefonlarda instagram story bulanık sorunu çözümü ve yüksek kalite yükleme ayarları.</image:caption>
+    </image:image>
+  </url>
 
-    <style>
-        :root { 
-            --bg: #f8fafc; 
-            --text: #0f172a; 
-            --accent: #2563eb; 
-            --border: #e2e8f0; 
-            --card-bg: #ffffff;
-        }
-        
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  <!-- REHBER: STEAM HIZ SORUNU -->
+  <url>
+    <loc>https://xenoncountry.com/steamhizsorunu/steam-hiz-sorunu.html</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1542751371-adc38448a05e</image:loc>
+      <image:title>Steam İndirme Hızı Arttırma</image:title>
+      <image:caption>Steam yavaş indirme sorunu çözümü, indirme bölgesi değiştirme ve önbellek temizleme rehberi.</image:caption>
+    </image:image>
+  </url>
 
-        header { background: #fff; border-bottom: 1px solid var(--border); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-        .logo { font-size: 22px; font-weight: 900; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 12px; }
-        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, #0f172a, #334155); color: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
-        
-        /* Hero Section (Compact) */
-        .hero { 
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
-            color: #fff; 
-            padding: 30px 20px; 
-            margin-bottom: 30px; 
-            border-bottom: 1px solid #334155;
-        }
-        .hero-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-        .hero-text h1 { font-size: 24px; font-weight: 800; margin-bottom: 5px; color: #fff; }
-        .hero-text p { font-size: 14px; color: #94a3b8; margin: 0; }
-        .hero-icon { font-size: 32px; color: var(--accent); opacity: 0.8; }
-        @media (max-width: 768px) { .hero-inner { flex-direction: column; text-align: center; } }
+  <!-- REHBER: ATM PARA YUTMA -->
+  <url>
+    <loc>https://xenoncountry.com/finans/atm-para-yuttu.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1563986768609-322da13575f3</image:loc>
+      <image:title>ATM Para Yuttu Ne Yapmalıyım</image:title>
+      <image:caption>ATM paranızı yuttuğunda yapılması gerekenler, banka dilekçe örneği ve para iade süreci.</image:caption>
+    </image:image>
+  </url>
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; display: grid; grid-template-columns: 2.5fr 1fr; gap: 40px; }
-        @media (max-width: 950px) { .container { grid-template-columns: 1fr; } }
+  <!-- REHBER: KARTTAN PARA ÇEKİLDİ -->
+  <url>
+    <loc>https://xenoncountry.com/finans/karttan-para-cekildi.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1556742049-0cfed4f7a07d</image:loc>
+      <image:title>İnternet Alışverişinde Sipariş Oluşmadı Para Çekildi</image:title>
+      <image:caption>Kredi kartından para çekildi ama sipariş görünmüyor sorunu ve askıda provizyon çözümü.</image:caption>
+    </image:image>
+  </url>
 
-        .section-title { font-size: 22px; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; color: #1e293b; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        .section-title i { color: var(--accent); }
+  <!-- REHBER: KOMBİ BASINCI -->
+  <url>
+    <loc>https://xenoncountry.com/evyasam/kombi-basinci.html</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-        /* Tools Grid */
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 15px; margin-bottom: 50px; }
-        .tool-card { background: var(--card-bg); border: 1px solid var(--border); padding: 20px; border-radius: 16px; text-decoration: none; color: inherit; transition: 0.3s; position: relative; overflow: hidden; display: flex; flex-direction: column; }
-        .tool-card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.08); }
-        .tool-card .icon { width: 45px; height: 45px; background: #eff6ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 12px; color: var(--accent); transition: 0.3s; }
-        .tool-card:hover .icon { background: var(--accent); color: #fff; }
-        .tool-card h3 { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
-        .tool-card p { font-size: 13px; color: #64748b; line-height: 1.4; flex-grow: 1; }
+  <!-- REHBER: YURT DIŞI TELEFON -->
+  <url>
+    <loc>https://xenoncountry.com/ekonomi/yurt-disi-telefon-kaydi.html</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-        /* Blog List (Expanded) */
-        .blog-list { display: grid; grid-template-columns: 1fr; gap: 15px; }
-        @media (min-width: 700px) { .blog-list { grid-template-columns: repeat(2, 1fr); } }
+  <!-- ARAÇ: TAPU HESAPLAMA -->
+  <url>
+    <loc>https://xenoncountry.com/emlak/tapu-masraf-hesaplama.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-        .blog-item { display: flex; flex-direction: column; background: #fff; border-radius: 16px; border: 1px solid var(--border); text-decoration: none; color: inherit; transition: 0.2s; overflow: hidden; height: 100%; }
-        .blog-item:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-color: #cbd5e1; }
-        .blog-thumb { width: 100%; height: 160px; object-fit: cover; }
-        .blog-content { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; }
-        .blog-content h4 { font-size: 16px; font-weight: 800; margin-bottom: 8px; color: #0f172a; line-height: 1.4; }
-        .blog-content p { font-size: 13px; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1; }
-        .read-more { font-size: 12px; font-weight: 700; color: var(--accent); margin-top: auto; display: flex; align-items: center; gap: 5px; }
+  <!-- ARAÇ: MESAJ SİHİRBAZI -->
+  <url>
+    <loc>https://xenoncountry.com/iletisim/mesaj-sihirbazi.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-        /* Sidebar */
-        .sidebar-widget { background: #fff; border: 1px solid var(--border); padding: 25px; border-radius: 24px; margin-bottom: 30px; }
-        .widget-title { font-size: 16px; font-weight: 800; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+  <!-- ARAÇ: İNTERNET HIZ TESTİ -->
+  <url>
+    <loc>https://xenoncountry.com/teknoloji/internet-hiz-hesaplama.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-        footer { border-top: 1px solid var(--border); padding: 40px 20px; text-align: center; color: #64748b; font-size: 13px; background: #fff; }
-        .badge { background: #dcfce7; color: #166534; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 6px; text-transform: uppercase; margin-left: 5px; vertical-align: middle; }
-        .badge-new { background: #fee2e2; color: #b91c1c; }
-        .badge-hot { background: #ffedd5; color: #c2410c; }
-    </style>
-</head>
-<body>
+  <!-- ARAÇ: DİLEKÇE SİHİRBAZI -->
+  <url>
+    <loc>https://xenoncountry.com/rehber/hak-arama-rehberi.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-    <header>
-        <div class="nav-container">
-            <a href="/" class="logo">
-                <div class="logo-icon"><i class="fa-solid fa-atom"></i></div>
-                Xenon Country
-            </a>
-            <div style="font-size: 13px; font-weight: 600; color: #64748b; display:none; @media(min-width:600px){display:block;}">
-                Dijital İsviçre Çakınız
-            </div>
-        </div>
-    </header>
+  <!-- ARAÇ: NET KAR HESAPLA -->
+  <url>
+    <loc>https://xenoncountry.com/eticaret/net-kar-sihirbazi.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-    <!-- Compact Hero Section -->
-    <section class="hero">
-        <div class="hero-inner">
-            <div class="hero-text">
-                <h1>Karmaşaya Son, Çözüme Hoş Geldiniz.</h1>
-                <p>İnternette kaybolmadan; hesaplama araçlarına, resmi dilekçelere ve net cevaplara ulaşın.</p>
-            </div>
-            <div class="hero-icon">
-                <i class="fa-solid fa-compass-drafting"></i>
-            </div>
-        </div>
-    </section>
+  <!-- ARAÇ: YAKIT HESAPLA -->
+  <url>
+    <loc>https://xenoncountry.com/otomotiv/yakit-hesaplama.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-    <div class="container">
-        
-        <main>
-            <!-- ARAÇLAR BÖLÜMÜ -->
-            <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Popüler Araçlar</h2>
-            <div class="tools-grid">
-                
-                <!-- Tapu & Araç Masraf Robotu -->
-                <a href="emlak/tapu-masraf-hesaplama.html" class="tool-card" style="border-color:#059669;">
-                    <div class="icon" style="color:#059669; background:#ecfdf5;"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                    <h3>Tapu & Araç Masrafı <span class="badge badge-new">2026</span></h3>
-                    <p>Ev veya araba alırken sürpriz yok. Tapu harcı, noter, döner sermaye ve ekspertiz giderlerini kuruşu kuruşuna gör.</p>
-                </a>
+  <!-- ARAÇ: GEÇMİŞ YATIRIM -->
+  <url>
+    <loc>https://xenoncountry.com/yatirim/index.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-                <!-- Mesaj Sihirbazı -->
-                <a href="iletisim/mesaj-sihirbazi.html" class="tool-card" style="border-color:#7c3aed;">
-                    <div class="icon" style="color:#7c3aed; background:#f5f3ff;"><i class="fa-solid fa-comment-dots"></i></div>
-                    <h3>Mesaj Sihirbazı <span class="badge badge-hot">VİRAL</span></h3>
-                    <p>Patrona zam maili, ev sahibine bahane veya sevgiliye özür mesajı... Sen ne diyeceğini seç, biz profesyonelce yazalım.</p>
-                </a>
+  <!-- ARAÇ: HEDİYE SİHİRBAZI -->
+  <url>
+    <loc>https://xenoncountry.com/hediye/index.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-                <!-- İnternet & Kota Hesaplayıcı -->
-                <a href="teknoloji/internet-hiz-hesaplama.html" class="tool-card">
-                    <div class="icon" style="color:#0ea5e9; background:#e0f2fe;"><i class="fa-solid fa-wifi"></i></div>
-                    <h3>İnternet Kota & Hız</h3>
-                    <p>GTA 5 kaç saatte iner? Netflix kotamı bitirir mi? İndirme süresini ve harcanan veriyi hesapla.</p>
-                </a>
-
-                <!-- Dilekçe Sihirbazı -->
-                <a href="rehber/hak-arama-rehberi.html" class="tool-card">
-                    <div class="icon"><i class="fa-solid fa-file-pen"></i></div>
-                    <h3>Dilekçe Sihirbazı</h3>
-                    <p>Tüketici Hakem Heyeti, Trafik Cezası veya İstifa dilekçenizi saniyeler içinde, resmi formatta oluşturun.</p>
-                </a>
-
-                <!-- Net Kar Sihirbazı -->
-                <a href="eticaret/net-kar-sihirbazi.html" class="tool-card">
-                    <div class="icon"><i class="fa-solid fa-calculator"></i></div>
-                    <h3>Net Kar Hesapla</h3>
-                    <p>Trendyol, Hepsiburada komisyonları, KDV ve kargo düşünce cebine gerçekten ne kalıyor?</p>
-                </a>
-
-                <!-- Yakıtmatik -->
-                <a href="otomotiv/yakit-hesaplama.html" class="tool-card">
-                    <div class="icon"><i class="fa-solid fa-gas-pump"></i></div>
-                    <h3>Yakıtmatik</h3>
-                    <p>Şehir içi/dışı farkıyla km maliyetini ve kişi başı yolculuk tutarını anında hesapla.</p>
-                </a>
-
-                <!-- Zaman Makinesi -->
-                <a href="yatirim/index.html" class="tool-card">
-                    <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3>Geçmiş Yatırım</h3>
-                    <p>"Keşke o zaman dolar/altın alsaydım" dediğin paranın bugünkü değerini gör ve üzül.</p>
-                </a>
-
-                <!-- Hediye Sihirbazı -->
-                <a href="hediye/index.html" class="tool-card">
-                    <div class="icon"><i class="fa-solid fa-gift"></i></div>
-                    <h3>Hediye Sihirbazı <span class="badge">AI</span></h3>
-                    <p>Kime, neye göre, ne alacağını yapay zeka senin için bulsun.</p>
-                </a>
-
-            </div>
-
-            <!-- REHBERLER BÖLÜMÜ -->
-            <h2 class="section-title"><i class="fa-solid fa-book-open"></i> "Nasıl Çözülür?" Rehberleri</h2>
-            <div class="blog-list">
-                
-                <!-- 1. Kombi Rehberi -->
-                <a href="evyasam/kombi-basinci.html" class="blog-item">
-                    <img src="https://images.unsplash.com/photo-1585129777179-734fb4419b6e?auto=format&fit=crop&w=600&q=80" alt="Kombi" class="blog-thumb">
-                    <div class="blog-content">
-                        <h4>Kombi Basıncı Neden Düşüyor? (Hızlı Teşhis)</h4>
-                        <p>Usta çağırmadan önce genleşme tankını ve sızıntıları kontrol etme rehberi.</p>
-                        <span class="read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <!-- 2. Kart Sorunu -->
-                <a href="finans/karttan-para-cekildi.html" class="blog-item">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=600&q=80" alt="Pos Cihazı" class="blog-thumb">
-                    <div class="blog-content">
-                        <h4>Karttan Para Çekildi Ama Sipariş Oluşmadı?</h4>
-                        <p>Askıda kalan provizyon ödemelerinin iade süreci ve bankayla iletişim yolları.</p>
-                        <span class="read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <!-- 3. ATM Sorunu (YENİ) -->
-                <a href="finans/atm-para-yuttu.html" class="blog-item">
-                    <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cd4?auto=format&fit=crop&w=600&q=80" alt="ATM" class="blog-thumb">
-                    <div class="blog-content">
-                        <h4>ATM Paranızı Yuttuysa Panik Yapmayın!</h4>
-                        <p>Kasa mutabakatı süreci ve paranızı bankadan en hızlı nasıl geri alırsınız?</p>
-                        <span class="read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <!-- 4. Instagram Kalite (YENİ) -->
-                <a href="teknoloji/instagram-cozumu.html" class="blog-item">
-                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80" alt="Instagram" class="blog-thumb">
-                    <div class="blog-content">
-                        <h4>Instagram Hikayeler Neden Bulanık? (2025)</h4>
-                        <p>Android telefonlarda yaşanan kalite kaybını önleyen gizli ayar ve yükleme taktikleri.</p>
-                        <span class="read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <!-- 5. Steam İndirme Hızı (YENİ) -->
-                <a href="teknoloji/steam-hiz-sorunu.html" class="blog-item">
-                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=600&q=80" alt="Gaming" class="blog-thumb">
-                    <div class="blog-content">
-                        <h4>Steam İndirme Hızı Neden Düşük?</h4>
-                        <p>İnternetiniz hızlı olsa bile Steam'de yavaş indirme sorununun sunucu bazlı çözümü.</p>
-                        <span class="read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <!-- 6. Yurt Dışı Telefon (YENİ) -->
-                <a href="ekonomi/yurt-disi-telefon-kaydi.html" class="blog-item">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Pasaport ve Telefon" class="blog-thumb">
-                    <div class="blog-content">
-                        <h4>Yurt Dışı Telefon Kaydı (IMEI) Değer mi?</h4>
-                        <p>2025 IMEI kayıt ücretleri ile yurt içi fiyatları karşılaştırması. Kâr mı, zarar mı?</p>
-                        <span class="read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-            </div>
-        </main>
-
-        <aside>
-            <div class="sidebar-widget">
-                <h3 class="widget-title"><i class="fa-solid fa-fire"></i> Haftanın Yıldızı</h3>
-                <p style="font-size: 14px; color: #475569; margin-bottom: 15px;">
-                    Yeni açılan <b>Masraf Robotu</b> ile 2026 tapu ve noter ücretlerini hemen hesapla.
-                </p>
-                <a href="emlak/tapu-masraf-hesaplama.html" style="display: block; text-align: center; background: #059669; color: #fff; text-decoration: none; padding: 12px; border-radius: 12px; font-weight: 700;">Masrafı Gör</a>
-            </div>
-
-            <!-- REKLAM ALANI -->
-            <div class="sidebar-widget" style="text-align:center; padding:10px; min-height:280px; width:100%; box-sizing:border-box; background: #f1f5f9; border: 2px dashed #cbd5e1;">
-                <p style="font-size:12px; color:#94a3b8; margin-bottom:5px;">Reklam</p>
-                <ins class="adsbygoogle"
-                     style="display:block; width:100%;"
-                     data-ad-client="ca-pub-8335171074656428"
-                     data-ad-slot="1234567890"  
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </aside>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Xenon Country. Öz ve Gerçekçi Bilgi Arşivi.</p>
-        <p style="font-size: 12px; margin-top: 10px; opacity: 0.7;">İçerikler bilgilendirme amaçlıdır, yatırım veya teknik tavsiye değildir.</p>
-    </footer>
-
-</body>
-</html>
+</urlset>
